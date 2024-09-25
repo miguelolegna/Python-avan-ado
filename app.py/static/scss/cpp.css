@@ -1,0 +1,15 @@
+/* cplus.css */
+.cplus {
+    border-left: 5px solid #e67e22;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.cplus h2 {
+    color: #d35400;
+}
+
+.cplus pre {
+    background: #fdf2e9;
+    border: 1px solid #e67e22;
+}
