@@ -1,4 +1,5 @@
 body, html {
+
     margin: 0;
     padding: 0;
     height: 100%;
@@ -8,6 +9,14 @@ body, html {
   }
   
   .video-container {
+
+  margin: -10px;
+  padding: 0;
+  height: 100%;
+}
+
+.video-container {
+
     position: fixed; /* Usando fixed para ficar estático */
     top: 50%; 
     left: 50%; 
@@ -16,8 +25,13 @@ body, html {
     overflow: hidden; 
     transform: translate(-50%, -50%); /* Centraliza o container do vídeo */
     z-index: -1; /* Para que o vídeo fique atrás do conteúdo */
+
   
     .video-background {
+
+
+  .video-background {
+
       position: absolute;
       top: 50%;
       left: 50%;
@@ -25,6 +39,7 @@ body, html {
       min-height: 100%;
       width: auto;
       height: auto;
+
       z-index: -1; /* Coloca o vídeo abaixo do texto */  
       transform: translate(-50%, -50%); /* Centraliza o vídeo */
       background-color: black;
@@ -104,3 +119,34 @@ body, html {
     transform: translate(-50%, -50%) scale(1); /* Expande o brilho ao passar o mouse */
   }
   
+
+      z-index: -1; // Coloca o vídeo abaixo do texto  
+      transform: translate(-50%, -50%); // Centraliza o vídeo
+      background-color: black;
+  }
+
+  .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // Centraliza o texto
+      color: white; // Cor do texto
+      z-index: 2; // Coloca o texto acima do vídeo
+      text-align: center; // Centraliza o texto
+      font-size: 2em; // Tamanho da fonte
+  }
+}
+
+nav {
+  position: relative; /* Mantenha o nav em um nível de empilhamento */
+  z-index: 3; /* Aumente o z-index para ser maior que o do vídeo */
+  margin: 20px; /* Adicione margem para afastar do topo */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhor visibilidade */
+  padding: 10px;
+}
+
+nav a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remover sublinhado */
+  margin: 0 15px; /* Espaçamento entre os links */
+}

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
  
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='scss/styles.css') }}">
+
     <title>Página Inicial.</title>
 </head>
 
@@ -34,8 +39,32 @@
                     <div class="nav-item"><a href="/pross-comp">Processamento Computacional.</a></div>
                 </div>
             </nav>
+
+    <title>Página Inicial</title>
+</head>
+
+<body>
+    <div class="video-container">
+        <video id="myvideo" autoplay loop muted class="video-background"
+            src="{{ url_for('static', filename='videos/background neon.mp4') }}"></video>
+        <div class="overlay">
+            <h1>!!NOME DO PROJETO!!</h1>
+            <nav>
+                <div class="nav-item"><a href="/java">Java</a></div>
+                <div class="nav-item"><a href="/python">Python</a></div>
+                <div class="nav-item"><a href="/cpp">C++</a></div>
+                <div class="nav-item"><a href="/db">Banco de Dados</a></div>
+                <div class="nav-item"><a href="/redes">Redes</a></div>
+                <div class="nav-item"><a href="/pross-comp">Processamento Computacional</a></div>
+            </nav>
+            
+
         </div>
     </div>
 </body>
 
+
 </html>
+
+</html>
+
