@@ -1,20 +1,5 @@
-
-/* Estilo para a área de vídeo de fundo */
-.video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
+body{
+    background-color: #0c0c0c;
 }
 
 .overlay {

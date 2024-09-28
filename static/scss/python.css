@@ -8,8 +8,8 @@
 /* Body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Background branco */
-    color: #333; /* Texto escuro, pode-se alterar para #000 para preto */
+    background-color: #0c0c0c;
+    color: #ffffff; /* Texto escuro, pode-se alterar para #000 para preto */
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ h2 {
 
 /* Paragraph styling */
 p {
-    color: #333; /* Texto mais escuro */
+    color: #ffffff; /* Texto mais escuro */
     margin-bottom: 15px;
 }
 
