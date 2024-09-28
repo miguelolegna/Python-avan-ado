@@ -27,13 +27,18 @@ body, html {
   left: 0;
 }
 
+.under-construction{
+  width: 200px;
+  margin: 20px;
+}
+
 /* Div superior à direita, ajustada mais para a esquerda */
 .top-right {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 100px;
   padding: 30px;
   position: absolute;
-  top: 16%;
+  top: 10%;
   right: 25%;/* Move um pouco mais para a esquerda */
   color: white;
   padding: 30px;  /* Aumentar o padding para aumentar o tamanho */
@@ -50,14 +55,14 @@ body, html {
   border-radius: 100px;
   padding: 30px;
   position: absolute;
-  bottom: 15%;
-  left: 21%;  /* Mover mais para a direita */
+  bottom: 10%;
+  left: 18%;  /* Mover mais para a direita */
   color: white;
   padding: 30px;/* Aumentar o padding para aumentar o tamanho */
   background-color: black;
   border-radius: 100px;
   z-index: 2;
-  width: 40%;  /* Aumentar a largura */
+  width: 50%;  /* Aumentar a largura */
   text-align: center;
 }
 
