@@ -1,76 +1,141 @@
-/* Estilo para a área de vídeo de fundo */
-.video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+/* Resetando alguns estilos padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS para cores */
+:root {
+    --background-color: #0c0c0c;
+    --text-color: white;
+    --highlight-color: #FFD700;
+    --secondary-text-color: #e6e4da;
+    --code-background: #f7f4f4;
+    --code-color: black;
+    --container-background: rgb(12, 12, 12);
+}
+
+/* Estilos para o container da imagem */
+.image-container {
+    position: fixed; /* Tornando a imagem de fundo fixa */
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
     overflow: hidden;
+    z-index: -1; /* Coloca o container atrás do conteúdo */
 }
 
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.overlay {
-    position: relative;
+.image-background {
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o container */
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
-.content {
-    max-width: 800px; /* Controla a largura do conteúdo */
-    text-align: center;
-    color: white;
+/* Estilos gerais para o body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente escuro */
-    border-radius: 15px;
+    margin: 0; /* Remove a margem padrão do body */
 }
 
-/* Containers com sombras neon para os títulos */
-.title-container, .subtitle-container {
-    margin-bottom: 20px;
+/* Estilos para o container principal */
+.container {
+    background-color: var(--container-background, #fff);
+    width: 60%; /* Define uma largura fixa */
+    height: 80%; /* Define uma altura fixa */
+    max-width: 800px; /* Define uma largura máxima */
+    max-height: 600px; /* Define uma altura máxima */
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 2px solid var(--highlight-color, #007bff);
+    overflow-y: scroll; /* Permite rolagem vertical dentro do container */
+    scrollbar-width: none; /* Firefox: oculta a barra de rolagem */
+    -ms-overflow-style: none; /* Internet Explorer e Edge: oculta a barra de rolagem */
+    
+    margin-left: 750px; /* Ajuste este valor para mover mais para a direita */
+    margin-top: 130px; /* Adiciona uma margem superior para descer mais */
 }
 
-h1, h2 {
-    color: white;
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #00f7ff;
-    padding: 10px;
-    border-radius: 10px;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo transparente escuro */
-    box-shadow: 0px 0px 15px 5px rgba(255, 0, 255, 0.5), 0px 0px 15px 5px rgba(0, 247, 255, 0.5);
+/* Esconde a barra de rolagem no Chrome, Safari e Opera */
+.container::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem */
 }
 
-/* Sombra animada neon */
-@keyframes neonShadow {
-    0% {
-        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #00f7ff, 0 0 40px #00f7ff;
-    }
-    100% {
-        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00f7ff, 0 0 50px #00f7ff;
-    }
+/* Estilos para o conteúdo do container */
+.container-content {
+    margin-right: 20px; /* Adiciona margem para o conteúdo não tocar a borda */
 }
 
-h1, h2 {
-    animation: neonShadow 1.5s infinite alternate;
+/* Estilos para o título */
+h1 {
+    text-align: left;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    font-size: 30px; /* Reduz o tamanho da fonte */
 }
 
-/* Ajustes para o parágrafo */
-p {
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-/* Definir um subtítulo com um tamanho menor */
+/* Estilos para os subtítulos */
 h2 {
-    font-size: 1.8rem;
+    color: var(--highlight-color);
+    margin-top: 20px; /* Adiciona espaçamento superior */
+    margin-bottom: 10px; /* Reduz o espaçamento inferior */
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 22px; /* Reduz o tamanho dos subtítulos */
+}
+
+/* Estilos para os parágrafos */
+p {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.5; /* Reduz a altura da linha */
+    font-size: 17px; /* Reduz o tamanho da fonte */
+}
+
+/* Estilos para blocos de código */
+code {
+    background-color: var(--code-background);
+    color: var(--code-color);
+    padding: 5px 8px; /* Reduz o padding */
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem; /* Reduz o tamanho da fonte do código */
+}
+
+pre {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 15px; /* Reduz o padding */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    overflow-x: auto;
+    font-size: 1rem; /* Reduz o tamanho da fonte do bloco de código */
+}
+
+/* Estilos para listas */
+ul {
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1rem; /* Reduz o tamanho dos itens da lista */
+}
+
+strong {
+    color: var(--secondary-text-color);
+}
+
+/* Estilos para o footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
 }

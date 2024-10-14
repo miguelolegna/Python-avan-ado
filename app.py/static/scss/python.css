@@ -1,76 +1,126 @@
-/* Reset some default browser styles */
+/* Resetando alguns estilos padrões do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Variáveis CSS para cores */
+:root {
+    --background-color: #0c0c0c;
+    --text-color: white;
+    --highlight-color: #FFD700;
+    --secondary-text-color: #e6e4da;
+    --code-background: #f7f4f4;
+    --code-color: black;
+    --container-background: rgb(12, 12, 12);
+}
+
+/* Estilos para o container da imagem */
+.image-container {
+    position: fixed; /* Tornando a imagem de fundo fixa */
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    overflow: hidden;
+    z-index: -1; /* Coloca o container atrás do conteúdo */
+}
+
+.image-background {
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o container */
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos gerais para o body */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Background branco */
-    color: #333; /* Texto escuro, pode-se alterar para #000 para preto */
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
     padding: 20px;
-    display: flex;
-    justify-content: center;
+    margin: 0; /* Remove a margem padrão do body */
 }
 
-/* Main container styling */
+/* Estilos para o container principal */
 .container {
-    background-color: #000000; /* Mantém branco no fundo do container */
-    max-width: 800px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra em preto */
+    background-color: var(--container-background);
+    width: 40%; /* Reduz a largura do container */
+    padding: 30px; /* Reduz o padding interno */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Aumenta o sombreamento */
+    border-radius: 20px; /* Curva mais os cantos */
+    opacity: 0.95; /* Deixa levemente transparente */
+    margin: 20px 480px; /* Adiciona espaçamento superior e inferior */
+    border: 2px solid var(--highlight-color); /* Adiciona uma borda */
+    color: var(--text-color);
+    
+
 }
 
-/* Header styling */
+/* Estilos para o título */
 h1 {
-    text-align: center;
-    color: #DAA520; /* Dourado para o título principal */
-    margin-bottom: 20px;
+    text-align: left;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    font-size: 30px; /* Reduz o tamanho da fonte */
 }
 
-/* Section titles */
+/* Estilos para os subtítulos */
 h2 {
-    color: #000; /* Preto para os subtítulos */
-    border-bottom: 2px solid #DAA520; /* Linha dourada abaixo dos subtítulos */
-    margin-bottom: 10px;
+    color: var(--highlight-color);
+    margin-top: 20px; /* Adiciona espaçamento superior */
+    margin-bottom: 10px; /* Reduz o espaçamento inferior */
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    font-size: 22px; /* Reduz o tamanho dos subtítulos */
 }
 
-/* Paragraph styling */
+/* Estilos para os parágrafos */
 p {
-    color: #333; /* Texto mais escuro */
+    color: var(--text-color);
     margin-bottom: 15px;
+    line-height: 1.5; /* Reduz a altura da linha */
+    font-size: 17px; /* Reduz o tamanho da fonte */
 }
 
-/* List styling */
+/* Estilos para blocos de código */
+code {
+    background-color: var(--code-background);
+    color: var(--code-color);
+    padding: 5px 8px; /* Reduz o padding */
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem; /* Reduz o tamanho da fonte do código */
+}
+
+pre {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 15px; /* Reduz o padding */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Reduz o espaçamento inferior */
+    overflow-x: auto;
+    font-size: 1rem; /* Reduz o tamanho da fonte do bloco de código */
+}
+
+/* Estilos para listas */
 ul {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 ul li {
     margin-bottom: 10px;
+    font-size: 1rem; /* Reduz o tamanho dos itens da lista */
 }
 
-/* Strong text styling */
 strong {
-    color: #DAA520; /* Texto em negrito dourado */
+    color: var(--secondary-text-color);
 }
 
-/* Code block styling */
-pre {
-    background-color: #000; /* Fundo preto para o bloco de código */
-    color: #DAA520; /* Texto dourado para contraste */
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #e7e7e7;
-    padding: 2px 4px;
-    border-radius: 4px;
-    color: #000; /* Texto preto */
+/* Estilos para o footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary-text-color);
 }
