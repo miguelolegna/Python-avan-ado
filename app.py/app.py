@@ -7,7 +7,7 @@ app = Flask(__name__)
 assets = Environment(app)
 
 # Definir um bundle para o SCSS
-scss = Bundle('scss/styles.scss', filters='libsass', output='css/styles.css')
+scss = Bundle('scss/styles.scss', filters='libsass', output='scss/styles.css')
 assets.register('scss_all', scss)
 
 # Rotas
