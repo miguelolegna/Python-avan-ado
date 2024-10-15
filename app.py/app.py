@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-from flask_assets import Environment, Bundle
+from flask import Flask, render_template # type: ignore
+from flask_assets import Environment, Bundle # type: ignore
 
 app = Flask(__name__)
 
@@ -43,5 +43,6 @@ def computing():
 def documentacao():
     return render_template('Documentação.html')
 
+# Iniciar o app
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=True)
