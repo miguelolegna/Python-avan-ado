@@ -35,6 +35,10 @@ def AI():
 def tecnologia():
     return render_template('tecnologia.html')
 
+
+@app.route('/detalhesdoprojeto')  
+def detalhesdoprojeto():
+    return render_template('detalhesdoprojeto.html')
     
 
 @app.route('/java')  
