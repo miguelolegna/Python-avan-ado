@@ -19,9 +19,9 @@ def index():
 def apresentacao():
     return render_template('apresentacao.html')
 
-@app.route('/projeto')  
-def detalhesdoprojeto():
-    return render_template('detalhesdoprojeto.html')
+@app.route('/Documentação')  
+def Documentação():
+    return render_template('/Documentação.html')
 
 @app.route('/API')  
 def API():
@@ -30,6 +30,11 @@ def API():
 @app.route('/AI')  
 def AI():
     return render_template('AI.html')
+
+@app.route('/tecnologia')  
+def tecnologia():
+    return render_template('tecnologia.html')
+
     
 
 @app.route('/java')  
