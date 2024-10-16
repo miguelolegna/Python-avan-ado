@@ -15,9 +15,6 @@ assets.register('scss_all', scss)
 def index():
     return render_template('index.html')
 
-@app.route('/apresentacao')  
-def apresentacao():
-    return render_template('apresentacao.html')
 
 @app.route('/Documentação')  
 def Documentação():
@@ -36,9 +33,9 @@ def tecnologia():
     return render_template('tecnologia.html')
 
 
-@app.route('/detalhesdoprojeto')  
-def detalhesdoprojeto():
-    return render_template('detalhesdoprojeto.html')
+@app.route('/detalhes')  
+def detalhes():
+    return render_template('detalhes.html')
     
 
 @app.route('/java')  
