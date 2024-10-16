@@ -1,5 +1,5 @@
-from flask import Flask, render_template # type: ignore
-from flask_assets import Environment, Bundle # type: ignore
+from flask import Flask, render_template
+from flask_assets import Environment, Bundle
 
 app = Flask(__name__)
 
@@ -14,6 +14,23 @@ assets.register('scss_all', scss)
 @app.route('/') 
 def index():
     return render_template('index.html')
+
+@app.route('/apresentacao')  
+def apresentacao():
+    return render_template('apresentacao.html')
+
+@app.route('/projeto')  
+def detalhesdoprojeto():
+    return render_template('detalhesdoprojeto.html')
+
+@app.route('/API')  
+def API():
+    return render_template('API.html')
+
+@app.route('/AI')  
+def AI():
+    return render_template('AI.html')
+    
 
 @app.route('/java')  
 def java():
@@ -38,10 +55,6 @@ def networks():
 @app.route('/pross-comp')  
 def computing():
     return render_template('pross-comp.html')
-
-@app.route('/Documentação')  
-def documentacao():
-    return render_template('Documentação.html')
 
 # Iniciar o app
 if __name__ == '__main__':
