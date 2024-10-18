@@ -60,7 +60,7 @@ body {
     overflow-y: scroll; /* Permite rolagem vertical dentro do container */
     scrollbar-width: none; /* Firefox: oculta a barra de rolagem */
     -ms-overflow-style: none; /* Internet Explorer e Edge: oculta a barra de rolagem */
-    margin-left: 600px;
+    margin-right: -600px;
 }
 
 /* Esconde a barra de rolagem no Chrome, Safari e Opera */
