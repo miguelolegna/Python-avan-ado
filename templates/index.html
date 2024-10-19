@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <h1>Página Inicial</h1>
+    <p>Bem-vindo ao nosso site informativo sobre processamento computacional e tecnologia.</p>
+    
+    <h2>Tópicos Principais</h2>
+    <p>Aqui você pode explorar os seguintes tópicos:</p>
+    <ul>
+        <li><a href="{{ url_for('cpp') }}">C++</a></li>
+        <li><a href="{{ url_for('db') }}">Banco de Dados</a></li>
+        <li><a href="{{ url_for('java') }}">Java</a></li>
+        <li><a href="{{ url_for('python') }}">Python</a></li>
+        <li><a href="{{ url_for('tecnologia') }}">Tecnologia</a></li>
+        <li><a href="{{ url_for('prosscomp') }}">Processamento com putacional</a></li>
+    </ul>
+{% endblock %}
