@@ -1,0 +1,126 @@
+/* Variáveis para cores */
+$bg-light-gray: #D3D3D3;
+$bg-dark-gray: #555;
+$text-color: white;
+$hover-bg: #777;
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: $bg-light-gray; /* Fundo cinza claro */
+}
+
+header {
+    background-color: #333;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+    position: fixed;
+    left: -180px; /* Parte da barra lateral espreitando */
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: $bg-dark-gray; /* Cinza mais escuro */
+    color: $text-color;
+    overflow-x: hidden;
+    transition: left 0.5s; /* Transição suave */
+    padding-top: 20px;
+
+    &:hover {
+        left: 0; /* Aparece ao passar o mouse */
+    }
+
+/* Variáveis para cores */
+$bg-light-gray: #D3D3D3;
+$bg-dark-gray: #555;
+$text-color: white;
+$hover-bg: #777;
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: $bg-light-gray; /* Fundo cinza claro */
+}
+
+header {
+    background-color: #333;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+    position: fixed;
+    left: -180px; /* Parte da barra lateral espreitando */
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: $bg-dark-gray; /* Cinza mais escuro */
+    color: $text-color;
+    overflow-x: hidden;
+    transition: left 0.5s; /* Transição suave */
+    padding-top: 20px;
+
+    &:hover {
+        left: 0; /* Aparece ao passar o mouse */
+    }
+
+    nav {
+        display: flex; /* Adiciona flexbox */
+        flex-direction: column; /* Alinha verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        width: 100%; /* Largura total do nav */
+
+        h2 {
+            text-align: center; /* Centraliza o texto */
+            margin: 0; /* Remove margens padrão */
+            padding: 10px 0; /* Adiciona espaço em cima e embaixo */
+            width: 100%; /* Garante que ocupe toda a largura */
+        }
+
+        p {
+            margin: 15px 0;
+            text-align: center; /* Centraliza os links */
+        }
+
+        a {
+            color: $text-color; /* Letras visíveis */
+            text-decoration: none;
+            display: block;
+
+            &:hover {
+                background-color: $hover-bg; /* Efeito ao passar o mouse sobre os links */
+            }
+        }
+    }
+}
+
+.content-container {
+    margin-left: 20px; /* Espaço para a barra lateral espreitar */
+    padding: 20px;
+    background-color: #f1f1f1;
+    transition: margin-left 0.5s;
+
+    .sidebar:hover & {
+        margin-left: 200px; /* Empurra o conteúdo quando a barra estiver visível */
+    }
+}
+
+
+.content-container {
+    margin-left: 20px; /* Espaço para a barra lateral espreitar */
+    padding: 20px;
+    background-color: #f1f1f1;
+    transition: margin-left 0.5s;
+
+    .sidebar:hover & {
+        margin-left: 200px; /* Empurra o conteúdo quando a barra estiver visível */
+    }
+}

@@ -1,35 +1,56 @@
+@charset "UTF-8";
+/* Variáveis para cores */
 /* Estilos gerais */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #D3D3D3; /* Fundo cinza claro */
 }
 
-/* Estilos para cabeçalho */
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Estilos para navegação */
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Estilos da barra lateral */
+.sidebar {
+  position: fixed;
+  left: -180px; /* Parte da barra lateral espreitando */
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #555; /* Cinza mais escuro */
+  color: white;
+  overflow-x: hidden;
+  transition: left 0.5s; /* Transição suave */
+  padding-top: 20px;
+}
+.sidebar:hover {
+  left: 0; /* Aparece ao passar o mouse */
+}
+.sidebar nav p {
+  margin: 15px 0;
+  text-align: center;
+}
+.sidebar nav a {
+  color: white; /* Letras visíveis */
+  text-decoration: none;
+  display: block;
+}
+.sidebar nav a:hover {
+  background-color: #777; /* Efeito ao passar o mouse sobre os links */
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+.content-container {
+  margin-left: 20px; /* Espaço para a barra lateral espreitar */
+  padding: 20px;
+  background-color: #f1f1f1;
+  transition: margin-left 0.5s;
+}
+.sidebar:hover .content-container {
+  margin-left: 200px; /* Empurra o conteúdo quando a barra estiver visível */
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Estilos para cada seção */
-section {
-    padding: 20px;
-}
+/*# sourceMappingURL=styles.css.map */
