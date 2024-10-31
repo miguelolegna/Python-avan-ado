@@ -6,22 +6,11 @@
     <h1>Bem-vindo ao nosso site informativo sobre tecnologia e processamento computacional!</h1>
     <p>Explore tópicos sobre Processamento Computacional, Linguagens de Programação e Tecnologia.</p>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Página Inicial</a></li>
-            <li><a href="#java">Java</a></li>
-            <li><a href="#processamento">Processamento Computacional</a></li>
-            <li><a href="#python">Python</a></li>
-            <li><a href="#redes">Redes</a></li>
-            <li><a href="#tecnologia">Tecnologia</a></li>
-        </ul>
-    </nav>
-
     <!-- Página Inicial -->
     <section id="inicio">
-        <h2>Página Inicial</h2>
-        <p>Bem-vindo ao nosso site informativo sobre processamento computacional e tecnologia.</p>
-        
+        <h2>Página principal</h2>
+        <p>Explore temas atuais e fundamentais no mundo da tecnologia.</p>
+
         <h3>Tópicos Principais</h3>
         <ul>
             <li><a href="#cpp">C++</a></li>
@@ -45,7 +34,8 @@
         <h3>Características do Java</h3>
         <p>
             Java é conhecido por sua portabilidade através da JVM (Java Virtual Machine), segurança, robustez, 
-            e suporte a programação concorrente.
+            e suporte a programação concorrente. Além disso, oferece Garbage Collection, que gerencia automaticamente a memória, 
+            tornando-o uma linguagem robusta para aplicações de larga escala.
         </p>
         <h3>Exemplo de Código em Java</h3>
         <pre><code>
@@ -57,7 +47,8 @@ public class HelloWorld {
         </code></pre>
         <h3>Evolução do Java</h3>
         <p>
-            Java passou por várias atualizações, cada uma introduzindo novas funcionalidades, como expressões lambda no Java 8.
+            Java passou por várias atualizações, cada uma introduzindo novas funcionalidades, como expressões lambda no Java 8, 
+            módulos no Java 9 e expressões de texto mais fáceis no Java 13.
         </p>
     </section>
 
@@ -79,12 +70,8 @@ public class HelloWorld {
         <h3 id="organizacao">Organização de um Computador</h3>
         <p>
             Um computador é uma máquina que processa dados, recebendo entradas, processando-as 
-            e gerando saídas. O processamento ocorre em etapas, começando com a entrada do usuário 
-            e culminando na saída final. 
-        </p>
-        <p>
-            Por exemplo, ao abrir um programa, o sistema operacional localiza o programa na memória, 
-            carrega-o na RAM e exibe a interface do programa na tela.
+            e gerando saídas. O processamento ocorre em etapas, como a entrada de dados, processamento interno, 
+            armazenamento temporário na memória e geração da saída.
         </p>
 
         <h3 id="componentes">Componentes do Computador</h3>
@@ -92,12 +79,12 @@ public class HelloWorld {
             Os principais componentes de um computador incluem:
         </p>
         <ul>
-            <li>Placa-mãe: Conecta todos os componentes do computador.</li>
-            <li>CPU: O "cérebro" do computador.</li>
-            <li>RAM: Memória utilizada para armazenar dados e programas em uso.</li>
-            <li>Dispositivos de armazenamento: HDDs, SSDs, etc.</li>
-            <li>Placa de vídeo: Processa gráficos e imagens.</li>
-            <li>Fonte de alimentação: Fornece energia para o sistema.</li>
+            <li><strong>Placa-mãe:</strong> Conecta todos os componentes do computador.</li>
+            <li><strong>CPU:</strong> O "cérebro" do computador que executa operações.</li>
+            <li><strong>RAM:</strong> Armazena dados e programas em uso.</li>
+            <li><strong>Dispositivos de Armazenamento:</strong> HDDs, SSDs para armazenamento a longo prazo.</li>
+            <li><strong>Placa de vídeo:</strong> Processa gráficos e imagens, importante para jogos e renderização.</li>
+            <li><strong>Fonte de alimentação:</strong> Fornece energia para o sistema.</li>
         </ul>
         <img src="{{ url_for('static', filename='foto/placa_mae.jpg') }}" alt="Placa Mãe" />
 
@@ -119,11 +106,10 @@ public class HelloWorld {
         </p>
         <ul>
             <li><strong>ULA (Unidade Lógica e Aritmética):</strong> Realiza operações aritméticas e lógicas.</li>
-            <li><strong>UC (Unidade de Controle):</strong> Controla as operações do processador.</li>
+            <li><strong>UC (Unidade de Controle):</strong> Coordena as operações do processador.</li>
         </ul>
         <p>
-            Um exemplo de como a ULA e a UC trabalham juntas é a soma de dois números, onde a ULA executa 
-            a operação e a UC coordena o processo.
+            A UC gerencia o fluxo de instruções e a ULA executa cálculos. Ambos são essenciais para a execução das tarefas do computador.
         </p>
     </section>
 
@@ -175,7 +161,7 @@ hello_world()
         <h3>Impacto das Redes na Sociedade</h3>
         <p>
             As redes revolucionaram a comunicação e o acesso à informação, permitindo o crescimento da internet 
-            e impactando setores como educação, saúde e comércio...
+            e impactando setores como educação, saúde e comércio.
         </p>
     </section>
 
@@ -196,4 +182,58 @@ hello_world()
             As tendências incluem inteligência artificial, computação em nuvem, Internet das Coisas (IoT) e big data.
         </p>
     </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- C++ -->
+    <section id="cpp">
+        <h2>História do C++</h2>
+        <p>
+            C++ foi desenvolvido por Bjarne Stroustrup nos anos 1980 como uma extensão da linguagem C, incluindo suporte para programação orientada a objetos. 
+            É amplamente utilizada para sistemas de alto desempenho, como sistemas operacionais, jogos e softwares de desktop.
+        </p>
+        <h3>Características do C++</h3>
+        <p>
+            C++ é conhecido por sua eficiência, flexibilidade e suporte a múltiplos paradigmas de programação, incluindo procedural e orientada a objetos.
+        </p>
+        <h3>Exemplo de Código em C++</h3>
+        <pre><code>
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+        </code></pre>
+        <h3>Aplicações e Evolução</h3>
+        <p>
+            C++ é utilizado em software de alto desempenho, incluindo motores de jogos, drivers de dispositivos e sistemas embutidos.
+        </p>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Banco de Dados -->
+    <section id="db">
+        <h2>Banco de Dados</h2>
+        <p>
+            Um banco de dados é uma coleção de dados organizados de forma que possam ser facilmente acessados, gerenciados e atualizados.
+            Existem vários tipos de bancos de dados, incluindo relacionais, NoSQL e distribuídos.
+        </p>
+        <h3>Tipos de Banco de Dados</h3>
+        <ul>
+            <li><strong>Banco de Dados Relacional:</strong> Armazena dados em tabelas, como o MySQL e o PostgreSQL.</li>
+            <li><strong>Banco de Dados NoSQL:</strong> Ideal para dados não estruturados e de grande volume, como MongoDB e Cassandra.</li>
+            <li><strong>Banco de Dados em Nuvem:</strong> Oferece armazenamento escalável, como o Amazon RDS e o Google Cloud Firestore.</li>
+        </ul>
+        <h3>Exemplo de Consulta SQL</h3>
+        <pre><code>
+SELECT nome, idade FROM usuarios WHERE idade > 18;
+        </code></pre>
+        <p>
+            Consultas SQL permitem buscar, atualizar e manipular dados em bancos de dados relacionais.
+        </p>
+    </section>
+
 {% endblock %}
