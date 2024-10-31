@@ -6,25 +6,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Meu Site</h1>
-        <nav>
-            <h2>Navegação</h2>
-            <p><a href="{{ url_for('index') }}">Home</a></p>
-            <p><a href="{{ url_for('cpp') }}">C++</a></p>
-            <p><a href="{{ url_for('db') }}">Banco de Dados</a></p>
-            <p><a href="{{ url_for('java') }}">Java</a></p>
-            <p><a href="{{ url_for('python') }}">Python</a></p>
-            <p><a href="{{ url_for('reds') }}">Redes</a></p>
-            <p><a href="{{ url_for('tecnologia') }}">Tecnologia</a></p>
-            <li><a href="{{ url_for('prosscomp') }}">Processamento computacional</a></li>
-        </nav>
-    </header>
+   
     <main>
         {% block content %}
         {% endblock %}
     </main>
     <footer>
+        
         <p>&copy; 2024 Meu Site</p>
     </footer>
 </body>
