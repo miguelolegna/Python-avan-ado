@@ -1,19 +1,199 @@
 {% extends 'base.html' %}
 
-{% block title %}Página Inicial{% endblock %}
+{% block title %}Conteúdo Unificado{% endblock %}
 
 {% block content %}
-    <h1>Página Inicial</h1>
-    <p>Bem-vindo ao nosso site informativo sobre processamento computacional e tecnologia.</p>
-    
-    <h2>Tópicos Principais</h2>
-    <p>Aqui você pode explorar os seguintes tópicos:</p>
-    <ul>
-        <li><a href="{{ url_for('cpp') }}">C++</a></li>
-        <li><a href="{{ url_for('db') }}">Banco de Dados</a></li>
-        <li><a href="{{ url_for('java') }}">Java</a></li>
-        <li><a href="{{ url_for('python') }}">Python</a></li>
-        <li><a href="{{ url_for('tecnologia') }}">Tecnologia</a></li>
-        <li><a href="{{ url_for('prosscomp') }}">Processamento com putacional</a></li>
-    </ul>
+    <h1>Bem-vindo ao nosso site informativo sobre tecnologia e processamento computacional!</h1>
+    <p>Explore tópicos sobre Processamento Computacional, Linguagens de Programação e Tecnologia.</p>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Página Inicial</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#processamento">Processamento Computacional</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#redes">Redes</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+        </ul>
+    </nav>
+
+    <!-- Página Inicial -->
+    <section id="inicio">
+        <h2>Página Inicial</h2>
+        <p>Bem-vindo ao nosso site informativo sobre processamento computacional e tecnologia.</p>
+        
+        <h3>Tópicos Principais</h3>
+        <ul>
+            <li><a href="#cpp">C++</a></li>
+            <li><a href="#db">Banco de Dados</a></li>
+            <li><a href="#java">Java</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#tecnologia">Tecnologia</a></li>
+            <li><a href="#processamento">Processamento Computacional</a></li>
+        </ul>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Java -->
+    <section id="java">
+        <h2>História do Java</h2>
+        <p>
+            Java é uma linguagem de programação de alto nível, orientada a objetos, criada por James Gosling e sua equipe na Sun Microsystems em 1995. 
+            A filosofia do Java é "escreva uma vez, execute em qualquer lugar", permitindo que programas Java sejam executados em diversas plataformas.
+        </p>
+        <h3>Características do Java</h3>
+        <p>
+            Java é conhecido por sua portabilidade através da JVM (Java Virtual Machine), segurança, robustez, 
+            e suporte a programação concorrente.
+        </p>
+        <h3>Exemplo de Código em Java</h3>
+        <pre><code>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+        </code></pre>
+        <h3>Evolução do Java</h3>
+        <p>
+            Java passou por várias atualizações, cada uma introduzindo novas funcionalidades, como expressões lambda no Java 8.
+        </p>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Processamento Computacional -->
+    <section id="processamento">
+        <h2>Processamento Computacional</h2>
+
+        <nav>
+            <ul>
+                <li><a href="#organizacao">Organização de um Computador</a></li>
+                <li><a href="#componentes">Componentes do Computador</a></li>
+                <li><a href="#memoria">Unidade de Memória</a></li>
+                <li><a href="#processador">Processador</a></li>
+            </ul>
+        </nav>
+
+        <h3 id="organizacao">Organização de um Computador</h3>
+        <p>
+            Um computador é uma máquina que processa dados, recebendo entradas, processando-as 
+            e gerando saídas. O processamento ocorre em etapas, começando com a entrada do usuário 
+            e culminando na saída final. 
+        </p>
+        <p>
+            Por exemplo, ao abrir um programa, o sistema operacional localiza o programa na memória, 
+            carrega-o na RAM e exibe a interface do programa na tela.
+        </p>
+
+        <h3 id="componentes">Componentes do Computador</h3>
+        <p>
+            Os principais componentes de um computador incluem:
+        </p>
+        <ul>
+            <li>Placa-mãe: Conecta todos os componentes do computador.</li>
+            <li>CPU: O "cérebro" do computador.</li>
+            <li>RAM: Memória utilizada para armazenar dados e programas em uso.</li>
+            <li>Dispositivos de armazenamento: HDDs, SSDs, etc.</li>
+            <li>Placa de vídeo: Processa gráficos e imagens.</li>
+            <li>Fonte de alimentação: Fornece energia para o sistema.</li>
+        </ul>
+        <img src="{{ url_for('static', filename='foto/placa_mae.jpg') }}" alt="Placa Mãe" />
+
+        <h3 id="memoria">Unidade de Memória</h3>
+        <p>
+            A memória do computador é dividida em:
+        </p>
+        <ul>
+            <li><strong>Memória Primária (RAM):</strong> Armazena dados temporariamente enquanto o computador está ligado.</li>
+            <li><strong>Memória Secundária:</strong> Armazena dados permanentemente (HDD, SSD).</li>
+        </ul>
+        <p>
+            A memória é medida em bits, bytes, KB, MB, GB e TB.
+        </p>
+
+        <h3 id="processador">Processador</h3>
+        <p>
+            O processador é responsável por executar instruções. Sua estrutura básica inclui:
+        </p>
+        <ul>
+            <li><strong>ULA (Unidade Lógica e Aritmética):</strong> Realiza operações aritméticas e lógicas.</li>
+            <li><strong>UC (Unidade de Controle):</strong> Controla as operações do processador.</li>
+        </ul>
+        <p>
+            Um exemplo de como a ULA e a UC trabalham juntas é a soma de dois números, onde a ULA executa 
+            a operação e a UC coordena o processo.
+        </p>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Python -->
+    <section id="python">
+        <h2>História do Python</h2>
+        <p>
+            Python é uma linguagem de programação de alto nível, criada por Guido van Rossum e lançada em 1991. 
+            É conhecida pela sua simplicidade e legibilidade, o que a torna ideal para iniciantes e profissionais.
+        </p>
+        <h3>Características do Python</h3>
+        <p>
+            Python possui tipagem dinâmica e forte, suporte a múltiplos paradigmas de programação, e uma extensa biblioteca padrão.
+        </p>
+        <h3>Exemplo de Código em Python</h3>
+        <pre><code>
+def hello_world():
+    print("Hello, World!")
+
+hello_world()
+        </code></pre>
+        <h3>Popularidade e Aplicações</h3>
+        <p>
+            Python é amplamente utilizado em ciência de dados, desenvolvimento web, automação, inteligência artificial e muito mais.
+        </p>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Redes -->
+    <section id="redes">
+        <h2>Redes</h2>
+        <p>
+            As redes de computadores são um conjunto de dispositivos interconectados que comunicam entre si. 
+            Elas permitem a troca de dados e o compartilhamento de recursos, como impressoras e arquivos.
+        </p>
+        <h3>Tipos de Redes</h3>
+        <p>
+            Existem diferentes tipos de redes, como LAN (Rede de Área Local), WAN (Rede de Área Ampla), 
+            MAN (Rede de Área Metropolitana) e VPN (Rede Privada Virtual).
+        </p>
+        <h3>Características das Redes</h3>
+        <p>
+            As redes variam em termos de topologia, velocidade de transmissão e protocolos utilizados. 
+            A topologia se refere à forma como os dispositivos estão conectados.
+        </p>
+        <h3>Impacto das Redes na Sociedade</h3>
+        <p>
+            As redes revolucionaram a comunicação e o acesso à informação, permitindo o crescimento da internet 
+            e impactando setores como educação, saúde e comércio...
+        </p>
+    </section>
+
+    <hr> <!-- Linha horizontal para separação -->
+
+    <!-- Tecnologia -->
+    <section id="tecnologia">
+        <h2>Tecnologia</h2>
+        <p>
+            A tecnologia é um conjunto de ferramentas, técnicas e métodos utilizados para resolver problemas e criar produtos que atendem às necessidades humanas.
+        </p>
+        <h3>Áreas da Tecnologia</h3>
+        <p>
+            As principais áreas incluem Tecnologia da Informação, Engenharia e Biotecnologia.
+        </p>
+        <h3>Tendências Tecnológicas</h3>
+        <p>
+            As tendências incluem inteligência artificial, computação em nuvem, Internet das Coisas (IoT) e big data.
+        </p>
+    </section>
 {% endblock %}

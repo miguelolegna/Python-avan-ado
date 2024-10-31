@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="Página Inicial")
+    return render_template('index.html', title="Portal de Tecnologia e Computação")
 
 @app.route('/cpp')
 def cpp():
