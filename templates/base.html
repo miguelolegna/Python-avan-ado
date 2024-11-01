@@ -6,32 +6,26 @@
     <meta name="description" content="Descrição do site">
     <title>{% block title %}Título Padrão{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-
-
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
-
 </head>
 <body>
-
-   
 
     <!-- Barra lateral -->
     <div class="sidebar" id="sidebar">
         <nav>
           <h2>Navegação</h2>
-            <p><a href="{{ url_for('index') }}">Home</a></p>
-            <p><a href="{{ url_for('cpp') }}">C++</a></p>
-            <p><a href="{{ url_for('db') }}">Banco de Dados</a></p>
-            <p><a href="{{ url_for('java') }}">Java</a></p>
-            <p><a href="{{ url_for('python') }}">Python</a></p>
-            <p><a href="{{ url_for('reds') }}">Redes</a></p>
-            <p><a href="{{ url_for('tecnologia') }}">Tecnologia</a></p>
-            <p><a href="{{ url_for('prosscomp') }}">Processamento computacional</a></p>
+          <p><a href="{{ url_for('index') }}">Home</a></p>
+          <p><a href="#cpp">C++</a></p>
+          <p><a href="#db">Banco de Dados</a></p>
+          <p><a href="#java">Java</a></p>
+          <p><a href="#python">Python</a></p>
+          <p><a href="#reds">Redes</a></p>
+          <p><a href="#tecnologia">Tecnologia</a></p>
+          <p><a href="#processamento">Processamento</a></p>
         </nav>
     </div>
     
     <!-- Conteúdo principal -->
-
     <main>
         <div class="content-container">
             {% block content %}
@@ -40,7 +34,6 @@
     </main>
 
     <footer>
-        
         <p>&copy; 2024 Meu Site</p>
     </footer>
 
