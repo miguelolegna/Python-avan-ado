@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}Conteúdo Unificado{% endblock %}
+{% block title %}Conteúdo Unificado - Tecnologia, Programação e Ciência Computacional{% endblock %}
 
 {% block content %}
-    <h1>Bem-vindo ao nosso site informativo sobre tecnologia e processamento computacional!</h1>
-    <p>Explore tópicos sobre Processamento Computacional, Linguagens de Programação e Tecnologia.</p>
+    <h1>Bem-vindo ao Portal de Conhecimento em Tecnologia e Computação!</h1>
+    <p>Explore temas variados sobre Processamento Computacional, Linguagens de Programação, Banco de Dados e Inovação Tecnológica.</p>
 
     <!-- Página Inicial -->
     <section id="inicio">
-        <h2>Página principal</h2>
-        <p>Explore temas atuais e fundamentais no mundo da tecnologia.</p>
+        <h2>Sobre o Conteúdo</h2>
+        <p>Este site oferece informações detalhadas e atualizadas sobre diversos temas de tecnologia, voltadas tanto para iniciantes quanto para profissionais.</p>
 
         <h3>Tópicos Principais</h3>
         <ul>
@@ -22,20 +22,17 @@
         </ul>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Java -->
     <section id="java">
         <h2>História do Java</h2>
         <p>
-            Java é uma linguagem de programação de alto nível, orientada a objetos, criada por James Gosling e sua equipe na Sun Microsystems em 1995. 
-            A filosofia do Java é "escreva uma vez, execute em qualquer lugar", permitindo que programas Java sejam executados em diversas plataformas.
+            Java é uma linguagem de programação de alto nível criada em 1995 por James Gosling na Sun Microsystems, com o conceito de "escreva uma vez, execute em qualquer lugar".
         </p>
-        <h3>Características do Java</h3>
+        <h3>Características e Filosofia</h3>
         <p>
-            Java é conhecido por sua portabilidade através da JVM (Java Virtual Machine), segurança, robustez, 
-            e suporte a programação concorrente. Além disso, oferece Garbage Collection, que gerencia automaticamente a memória, 
-            tornando-o uma linguagem robusta para aplicações de larga escala.
+            Java é multiplataforma, baseada na JVM (Java Virtual Machine), que permite a execução em diversas arquiteturas. A segurança, robustez e facilidade de desenvolvimento são seus pilares.
         </p>
         <h3>Exemplo de Código em Java</h3>
         <pre><code>
@@ -45,86 +42,61 @@ public class HelloWorld {
     }
 }
         </code></pre>
-        <h3>Evolução do Java</h3>
-        <p>
-            Java passou por várias atualizações, cada uma introduzindo novas funcionalidades, como expressões lambda no Java 8, 
-            módulos no Java 9 e expressões de texto mais fáceis no Java 13.
-        </p>
+        <h3>Aplicações Modernas</h3>
+        <ul>
+            <li>Desenvolvimento de aplicativos empresariais e de grande porte.</li>
+            <li>Desenvolvimento para dispositivos móveis, principalmente Android.</li>
+            <li>Sistemas bancários e financeiros, onde a confiabilidade é crucial.</li>
+        </ul>
+        <h3>Empresa Bem-sucedida em Java</h3>
+        <p><strong>Netflix:</strong> Utiliza Java para desenvolver e gerenciar grande parte de sua infraestrutura, garantindo desempenho e confiabilidade em seu serviço de streaming global.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Processamento Computacional -->
     <section id="processamento">
         <h2>Processamento Computacional</h2>
-
-        <nav>
-            <ul>
-                <li><a href="#organizacao">Organização de um Computador</a></li>
-                <li><a href="#componentes">Componentes do Computador</a></li>
-                <li><a href="#memoria">Unidade de Memória</a></li>
-                <li><a href="#processador">Processador</a></li>
-            </ul>
-        </nav>
-
-        <h3 id="organizacao">Organização de um Computador</h3>
+        
+        <h3>Fundamentos de Computação</h3>
         <p>
-            Um computador é uma máquina que processa dados, recebendo entradas, processando-as 
-            e gerando saídas. O processamento ocorre em etapas, como a entrada de dados, processamento interno, 
-            armazenamento temporário na memória e geração da saída.
+            O processamento de dados segue três etapas principais: entrada, processamento e saída, modelo que define o funcionamento das máquinas modernas.
         </p>
 
-        <h3 id="componentes">Componentes do Computador</h3>
+        <h3>Arquitetura e Componentes</h3>
         <p>
-            Os principais componentes de um computador incluem:
+            A arquitetura do computador envolve a interação entre componentes como CPU, memória e dispositivos de armazenamento, entre outros.
         </p>
+
+        <h3>Componentes Importantes</h3>
         <ul>
-            <li><strong>Placa-mãe:</strong> Conecta todos os componentes do computador.</li>
-            <li><strong>CPU:</strong> O "cérebro" do computador que executa operações.</li>
-            <li><strong>RAM:</strong> Armazena dados e programas em uso.</li>
-            <li><strong>Dispositivos de Armazenamento:</strong> HDDs, SSDs para armazenamento a longo prazo.</li>
-            <li><strong>Placa de vídeo:</strong> Processa gráficos e imagens, importante para jogos e renderização.</li>
-            <li><strong>Fonte de alimentação:</strong> Fornece energia para o sistema.</li>
+            <li><strong>Placa-mãe:</strong> Conecta e permite a comunicação entre todos os componentes.</li>
+            <li><strong>CPU (Unidade Central de Processamento):</strong> Executa instruções e cálculos, sendo o "cérebro" do computador.</li>
+            <li><strong>Memória RAM:</strong> Armazena temporariamente dados e instruções durante a execução dos programas.</li>
+            <li><strong>Armazenamento:</strong> HDDs e SSDs armazenam dados permanentemente.</li>
+            <li><strong>GPU (Unidade de Processamento Gráfico):</strong> Processa gráficos e imagens.</li>
+            <li><strong>Fonte de alimentação:</strong> Fornece energia ao sistema.</li>
         </ul>
-        <img src="{{ url_for('static', filename='foto/placa_mae.jpg') }}" alt="Placa Mãe" />
 
-        <h3 id="memoria">Unidade de Memória</h3>
+        <h3>Exemplo de Processamento</h3>
         <p>
-            A memória do computador é dividida em:
+            No momento da execução de um programa, o sistema operacional aloca espaço na memória RAM, enquanto o processador interpreta e executa as instruções, gerando resultados para o usuário.
         </p>
-        <ul>
-            <li><strong>Memória Primária (RAM):</strong> Armazena dados temporariamente enquanto o computador está ligado.</li>
-            <li><strong>Memória Secundária:</strong> Armazena dados permanentemente (HDD, SSD).</li>
-        </ul>
-        <p>
-            A memória é medida em bits, bytes, KB, MB, GB e TB.
-        </p>
-
-        <h3 id="processador">Processador</h3>
-        <p>
-            O processador é responsável por executar instruções. Sua estrutura básica inclui:
-        </p>
-        <ul>
-            <li><strong>ULA (Unidade Lógica e Aritmética):</strong> Realiza operações aritméticas e lógicas.</li>
-            <li><strong>UC (Unidade de Controle):</strong> Coordena as operações do processador.</li>
-        </ul>
-        <p>
-            A UC gerencia o fluxo de instruções e a ULA executa cálculos. Ambos são essenciais para a execução das tarefas do computador.
-        </p>
+        <h3>Empresa Bem-sucedida em Processamento Computacional</h3>
+        <p><strong>Intel:</strong> A gigante dos processadores desenvolve CPUs de alta performance para computadores e dispositivos, sendo a principal referência em inovação e poder de processamento.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Python -->
     <section id="python">
         <h2>História do Python</h2>
         <p>
-            Python é uma linguagem de programação de alto nível, criada por Guido van Rossum e lançada em 1991. 
-            É conhecida pela sua simplicidade e legibilidade, o que a torna ideal para iniciantes e profissionais.
+            Python foi criado por Guido van Rossum em 1991, com a proposta de ser uma linguagem de fácil compreensão e versátil.
         </p>
         <h3>Características do Python</h3>
         <p>
-            Python possui tipagem dinâmica e forte, suporte a múltiplos paradigmas de programação, e uma extensa biblioteca padrão.
+            Python é uma linguagem interpretada, com tipagem dinâmica, e suporta programação orientada a objetos, funcional e procedural.
         </p>
         <h3>Exemplo de Código em Python</h3>
         <pre><code>
@@ -133,72 +105,75 @@ def hello_world():
 
 hello_world()
         </code></pre>
-        <h3>Popularidade e Aplicações</h3>
-        <p>
-            Python é amplamente utilizado em ciência de dados, desenvolvimento web, automação, inteligência artificial e muito mais.
-        </p>
+        <h3>Principais Aplicações</h3>
+        <ul>
+            <li>Ciência de Dados e Inteligência Artificial.</li>
+            <li>Automação de tarefas e desenvolvimento web.</li>
+            <li>Aplicações científicas e pesquisa acadêmica.</li>
+        </ul>
+        <h3>Empresa Bem-sucedida em Python</h3>
+        <p><strong>Instagram:</strong> Utiliza Python em grande parte de sua infraestrutura para garantir uma plataforma escalável e de alto desempenho para milhões de usuários.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Redes -->
     <section id="redes">
-        <h2>Redes</h2>
+        <h2>Redes de Computadores</h2>
         <p>
-            As redes de computadores são um conjunto de dispositivos interconectados que comunicam entre si. 
-            Elas permitem a troca de dados e o compartilhamento de recursos, como impressoras e arquivos.
+            Redes de computadores conectam dispositivos para troca de dados e compartilhamento de recursos, como arquivos e impressoras.
         </p>
-        <h3>Tipos de Redes</h3>
+        <h3>Tipos e Topologias</h3>
+        <ul>
+            <li><strong>LAN (Rede Local):</strong> Conecta dispositivos em uma área limitada, como um escritório ou prédio.</li>
+            <li><strong>WAN (Rede de Área Ampla):</strong> Conecta dispositivos a grandes distâncias.</li>
+            <li><strong>MAN (Rede Metropolitana):</strong> Conecta dispositivos em uma cidade ou área metropolitana.</li>
+            <li><strong>VPN (Rede Privada Virtual):</strong> Cria uma conexão segura e privada através da internet.</li>
+        </ul>
+        <h3>Segurança e Protocolos</h3>
         <p>
-            Existem diferentes tipos de redes, como LAN (Rede de Área Local), WAN (Rede de Área Ampla), 
-            MAN (Rede de Área Metropolitana) e VPN (Rede Privada Virtual).
+            Protocolos como TCP/IP e SSL/TLS garantem a transmissão segura de dados em redes, enquanto firewalls e sistemas de detecção de intrusão protegem contra ameaças.
         </p>
-        <h3>Características das Redes</h3>
-        <p>
-            As redes variam em termos de topologia, velocidade de transmissão e protocolos utilizados. 
-            A topologia se refere à forma como os dispositivos estão conectados.
-        </p>
-        <h3>Impacto das Redes na Sociedade</h3>
-        <p>
-            As redes revolucionaram a comunicação e o acesso à informação, permitindo o crescimento da internet 
-            e impactando setores como educação, saúde e comércio.
-        </p>
+        <h3>Empresa Bem-sucedida em Redes</h3>
+        <p><strong>Cisco:</strong> Líder global no desenvolvimento de equipamentos e soluções de rede, oferecendo infraestrutura para redes empresariais e centros de dados.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Tecnologia -->
     <section id="tecnologia">
-        <h2>Tecnologia</h2>
+        <h2>Inovação Tecnológica</h2>
         <p>
-            A tecnologia é um conjunto de ferramentas, técnicas e métodos utilizados para resolver problemas e criar produtos que atendem às necessidades humanas.
+            A tecnologia avança continuamente, oferecendo soluções para problemas complexos e melhorando a vida humana.
         </p>
-        <h3>Áreas da Tecnologia</h3>
-        <p>
-            As principais áreas incluem Tecnologia da Informação, Engenharia e Biotecnologia.
-        </p>
-        <h3>Tendências Tecnológicas</h3>
-        <p>
-            As tendências incluem inteligência artificial, computação em nuvem, Internet das Coisas (IoT) e big data.
-        </p>
+        <h3>Principais Áreas e Tendências</h3>
+        <ul>
+            <li><strong>Inteligência Artificial:</strong> Desenvolve sistemas capazes de aprender e tomar decisões.</li>
+            <li><strong>Computação em Nuvem:</strong> Oferece armazenamento e processamento de dados escaláveis.</li>
+            <li><strong>Internet das Coisas (IoT):</strong> Conecta dispositivos físicos à internet, permitindo coleta e análise de dados em tempo real.</li>
+            <li><strong>Big Data:</strong> Análise e processamento de grandes volumes de dados.</li>
+        </ul>
+        <h3>Empresa Bem-sucedida em Tecnologia</h3>
+        <p><strong>Google:</strong> Referência em inovação tecnológica, oferece soluções em busca, inteligência artificial, computação em nuvem e dispositivos móveis.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- C++ -->
     <section id="cpp">
-        <h2>História do C++</h2>
+        <h2>História e Evolução do C++</h2>
         <p>
-            C++ foi desenvolvido por Bjarne Stroustrup nos anos 1980 como uma extensão da linguagem C, incluindo suporte para programação orientada a objetos. 
-            É amplamente utilizada para sistemas de alto desempenho, como sistemas operacionais, jogos e softwares de desktop.
+            C++ foi desenvolvido por Bjarne Stroustrup na década de 1980, como uma extensão da linguagem C, incluindo conceitos de orientação a objetos.
         </p>
-        <h3>Características do C++</h3>
-        <p>
-            C++ é conhecido por sua eficiência, flexibilidade e suporte a múltiplos paradigmas de programação, incluindo procedural e orientada a objetos.
-        </p>
+        <h3>Características e Aplicações</h3>
+        <ul>
+            <li><strong>Eficiência:</strong> O C++ é uma das linguagens mais rápidas, sendo usado em aplicações de alto desempenho.</li>
+            <li><strong>Flexibilidade:</strong> Suporta programação procedural, orientada a objetos e funcional.</li>
+            <li><strong>Bibliotecas Ricas:</strong> A STL (Standard Template Library) fornece estruturas de dados e algoritmos eficientes.</li>
+        </ul>
         <h3>Exemplo de Código em C++</h3>
         <pre><code>
-#include <iostream>
+#include &lt;iostream&gt;
 using namespace std;
 
 int main() {
@@ -206,34 +181,30 @@ int main() {
     return 0;
 }
         </code></pre>
-        <h3>Aplicações e Evolução</h3>
-        <p>
-            C++ é utilizado em software de alto desempenho, incluindo motores de jogos, drivers de dispositivos e sistemas embutidos.
-        </p>
+        <h3>Empresa Bem-sucedida com C++</h3>
+        <p><strong>Adobe:</strong> Usa C++ para desenvolver softwares robustos e de alto desempenho, como Photoshop e Premiere Pro, amplamente usados na indústria criativa.</p>
     </section>
 
-    <hr> <!-- Linha horizontal para separação -->
+    <hr>
 
     <!-- Banco de Dados -->
     <section id="db">
         <h2>Banco de Dados</h2>
         <p>
-            Um banco de dados é uma coleção de dados organizados de forma que possam ser facilmente acessados, gerenciados e atualizados.
-            Existem vários tipos de bancos de dados, incluindo relacionais, NoSQL e distribuídos.
+            Um banco de dados é uma coleção organizada de dados, usada para armazenar e recuperar informações.
         </p>
         <h3>Tipos de Banco de Dados</h3>
         <ul>
-            <li><strong>Banco de Dados Relacional:</strong> Armazena dados em tabelas, como o MySQL e o PostgreSQL.</li>
-            <li><strong>Banco de Dados NoSQL:</strong> Ideal para dados não estruturados e de grande volume, como MongoDB e Cassandra.</li>
-            <li><strong>Banco de Dados em Nuvem:</strong> Oferece armazenamento escalável, como o Amazon RDS e o Google Cloud Firestore.</li>
+            <li><strong>Relacionais:</strong> Baseados em tabelas, usam SQL para gerenciar dados.</li>
+            <li><strong>NoSQL:</strong> Armazenam dados de forma não-relacional, ideais para grandes volumes de dados.</li>
+            <li><strong>Em Nuvem:</strong> Escaláveis e acessíveis remotamente, como AWS RDS e Google Firestore.</li>
         </ul>
         <h3>Exemplo de Consulta SQL</h3>
         <pre><code>
-SELECT nome, idade FROM usuarios WHERE idade > 18;
+SELECT nome, idade FROM usuarios WHERE idade &gt; 18;
         </code></pre>
-        <p>
-            Consultas SQL permitem buscar, atualizar e manipular dados em bancos de dados relacionais.
-        </p>
+        <h3>Empresa Bem-sucedida em Banco de Dados</h3>
+        <p><strong>Oracle:</strong> É uma das principais empresas de banco de dados do mundo, fornecendo soluções de alta performance e escalabilidade para clientes corporativos globais.</p>
     </section>
 
 {% endblock %}
