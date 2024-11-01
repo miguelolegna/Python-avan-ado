@@ -1,1 +1,3 @@
 .vercel
+# Ignorar o ambiente virtual
+dependencias/
