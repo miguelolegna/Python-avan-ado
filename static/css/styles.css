@@ -1,0 +1,208 @@
+body {
+    background-color: black;  /* Define o fundo da página como preto */
+    color: white;             /* Define a cor do texto como branco para melhor contraste */
+    margin: 0;                /* Remove margens padrão */
+    font-family: Arial, sans-serif; /* Define uma fonte padrão */
+}
+
+/* Estilo para a barra lateral */
+.sidebar ul {
+    list-style-type: none;              
+    padding-left: 0;                   
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;                 
+}
+
+/* Estilo para os links que se parecem com botões */
+.nav-button {
+    display: block;                      /* Faz o link ocupar todo o espaço disponível */
+    padding: 10px 15px;                 /* Espaçamento interno do botão */
+    background-color: rgba(2, 2, 2, 0.2); /* Fundo semi-transparente ciano */
+    color: white;                       /* Cor do texto */
+    text-decoration: none;              /* Remove o sublinhado */
+    border-radius: 5px;                /* Bordas arredondadas */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    
+}
+
+/* Efeito ao passar o mouse */
+.nav-button:hover {
+    background-color: rgba(3, 3, 3, 0.5); /* Fundo mais escuro ao passar o mouse */
+    box-shadow: 0 4px 15px rgb(5, 255, 255); /* Sombra ciano clara */
+}
+
+/* Estilo para os links quando ativos */
+.nav-button:active {
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.7); /* Sombra mais forte ao clicar */
+}
+
+/* Configurações básicas para a barra de navegação */
+nav {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #030303;
+    transition: left 0.3s ease;
+    color: #09f7cf;
+    padding-top: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px #09f7cf; /* Sombra ciano clara */
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #eff5f4;
+    text-decoration: none;
+}
+
+nav:hover {
+    left: 0;
+}
+
+nav::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 20px;
+    background: transparent;
+    z-index: 999;
+}
+
+/* Configurações para o container principal */
+.container {
+    display: flex;
+    justify-content: center;          /* Centraliza o conteúdo horizontalmente */
+    align-items: center;              /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh;                /* Altura mínima para centralização */
+    padding-left: 0px;              /* Espaço para a barra de navegação */
+}
+
+/* Centralização e estilo do conteúdo */
+.content {
+    max-width: 800px;                 /* Limita a largura do conteúdo */
+    text-align: center;               /* Centraliza o texto dentro do conteúdo */
+    padding: 20px;
+}
+
+/* Estilo para a mensagem de boas-vindas */
+.welcome h1 {
+    font-size: 2.5rem;
+    color: #09f7cf;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: wheat;
+    margin-top: 10px;
+}
+
+
+/* Estilos para os módulos */
+
+.modulo {
+    border: 5px solid #000000;               /* Borda para separar cada módulo */
+    border-radius: 25px;                   /* Bordas arredondadas */
+    margin: 15px 0;                       /* Espaço entre cada módulo */
+    background-color: #020000;            /* Fundo leve para destacar */
+    box-shadow: 0px 4px 4px #09f7cf; /* Sombra leve para efeito de destaque */
+    position: relative;                   /* Para que o label e checkbox funcionem corretamente */
+}
+
+
+.toggle {
+    display: none;                        /* O checkbox não é visível */
+}
+
+/* Estilos para o conteúdo do módulo */
+.modulo-content {
+    max-height: 0;                        /* Inicialmente oculta */
+    overflow: hidden;                     /* Oculta o conteúdo que excede a altura */
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
+    opacity: 0;                           /* Opacidade inicial */
+    transform: scale(0.8);                /* Inicia um pouco menor */
+    background-color: #030307;            /* Cor de fundo do conteúdo */
+    border: 1px solid #09f7cf;               /* Borda do conteúdo */
+    border-radius: 0 0 8px 8px;           /* Bordas arredondadas apenas na parte inferior */
+    padding: 0 10px;                      /* Espaço interno */
+    position: fixed;                      /* Fixa o conteúdo na tela */
+    top: 0;                               /* Alinha ao topo */
+    left: 0;                              /* Alinha à esquerda */
+    right: 0;                             /* Alinha à direita */
+    bottom: 0;                            /* Alinha ao fundo */
+    z-index: 1000;                        /* Coloca acima de outros elementos */
+}
+
+/* Estilo quando o checkbox está checado */
+.toggle:checked + .modulo-header + .modulo-content {
+    max-height: 100vh;                   /* Altura máxima quando ativo */
+    opacity: 1;                          /* Torna o conteúdo visível */
+    transform: scale(1);                 /* Tamanho normal ao ativar */
+}
+
+/* Estilos para os títulos e sub-títulos */
+.modulo h4, .modulo h5 {
+    color: #d61010;
+}
+
+.modulo h5 {
+    margin-top: 10px;
+}
+
+.modulo ul {
+    list-style-type: none;              /* Remover bolinhas da lista */
+    padding-left: 0;                   /* Remove o padding da lista */
+}
+
+.modulo ul li {
+    margin-bottom: 8px;                 /* Espaçamento entre os itens da lista */
+}
+
+.modulo a {
+    color: #007bff;                     /* Cor do link */
+    text-decoration: none;               /* Remove o sublinhado */
+}
+
+.modulo a:hover {
+    text-decoration: underline;          /* Sublinha ao passar o mouse */
+}
+
+/* Estilo de fundo escuro para quando o conteúdo estiver ativo */
+.toggle:checked + .modulo-header + .modulo-content::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);     /* Fundo escuro com opacidade */
+    z-index: -1;                        /* Coloca o fundo atrás do conteúdo */
+}
+
+.component-container {
+    margin-top: 20px;                   /* Margem superior para separação */
+}
+
+.component {
+    background-color: #000000;          /* Fundo para cada componente */
+    border: 1px solid #09f7cf;          /* Borda do componente */
+    border-radius: 5px;                 /* Bordas arredondadas */
+    padding: 15px;                      /* Espaçamento interno do componente */
+    margin-bottom: 15px;                /* Margem inferior entre componentes */
+}
+
+.component strong {
+    color: #05ffff;                     /* Cor do texto dos títulos dos componentes */
+}
+
+.component p {
+    margin-top: 5px;                    /* Margem acima do parágrafo */
+    color: #f1f1f1;                     /* Cor do texto do parágrafo */
+}
+
