@@ -50,7 +50,7 @@ nav {
     color: #09f7cf;
     padding-top: 20px;
     z-index: 1000;
-    box-shadow: 0 4px 8px #09f7cf; /* Sombra ciano clara */
+    box-shadow: 3px -10px 10px #09f7cf; /* Sombra ciano clara */
 }
 
 nav a {
@@ -81,7 +81,7 @@ nav::before {
     justify-content: center;          /* Centraliza o conteúdo horizontalmente */
     align-items: center;              /* Centraliza o conteúdo verticalmente */
     min-height: 100vh;                /* Altura mínima para centralização */
-    padding-left: 0px;              /* Espaço para a barra de navegação */
+    padding-left: 0px;                /* Espaço para a barra de navegação */
 }
 
 /* Centralização e estilo do conteúdo */
@@ -123,7 +123,8 @@ nav::before {
 /* Estilos para o conteúdo do módulo */
 .modulo-content {
     max-height: 0;                        /* Inicialmente oculta */
-    overflow: hidden;                     /* Oculta o conteúdo que excede a altura */
+    overflow: hidden;  
+    overflow-y: scroll;                   /* Oculta o conteúdo que excede a altura */
     transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
     opacity: 0;                           /* Opacidade inicial */
     transform: scale(0.8);                /* Inicia um pouco menor */
@@ -139,7 +140,7 @@ nav::before {
     z-index: 1000;                        /* Coloca acima de outros elementos */
 }
 
-/* Estilo quando o checkbox está checado */
+/* Estilo quando o checkbox está checado */ 
 .toggle:checked + .modulo-header + .modulo-content {
     max-height: 100vh;                   /* Altura máxima quando ativo */
     opacity: 1;                          /* Torna o conteúdo visível */
@@ -148,7 +149,7 @@ nav::before {
 
 /* Estilos para os títulos e sub-títulos */
 .modulo h4, .modulo h5 {
-    color: #d61010;
+    color: #09f7cf;
 }
 
 .modulo h5 {

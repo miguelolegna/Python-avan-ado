@@ -23,5 +23,9 @@ def processamento():
     return render_template('processamento.html')
 
 
+@app.route('/explo')
+def explo():
+    return render_template('explo.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

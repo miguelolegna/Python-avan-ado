@@ -3,18 +3,19 @@
 {% block title %}Processamento{% endblock %}
 
 {% block content %}
-<h2>Processamento</h2>
-<p>Aqui você pode explorar detalhes sobre os métodos e técnicas de processamento computacional que serão utilizados no projeto.</p>
+<h2>Processamento Computaccional</h2>
+<p>Aqui você pode explorar detalhes sobre os métodos e técnicas de processamento computacional de a cordo com o módulo da disciplina.</p>
 
 <h3>Módulos de Processamento de Dados</h3>
 
-<!-- Módulo para Componentes de um Computador -->
+<!-- Módulo: Componentes de um Computador -->
 <div class="modulo">
     <input type="checkbox" id="toggle-componente" class="toggle">
     <label for="toggle-componente" class="modulo-header">
         <h4>Componentes de um Computador</h4>
     </label>
     <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-componente').checked = false;">Fechar</button>
         <p>Os principais componentes de um computador e suas funções são:</p>
         <div class="component-container">
             <div class="component">
@@ -37,13 +38,14 @@
     </div>
 </div>
 
-<!-- Módulo para Unidade de Memória -->
+<!-- Módulo: Unidade de Memória -->
 <div class="modulo">
     <input type="checkbox" id="toggle-memoria" class="toggle">
     <label for="toggle-memoria" class="modulo-header">
         <h4>Unidade de Memória</h4>
     </label>
     <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-memoria').checked = false;">Fechar</button>
         <h3>Unidade de Memória</h3>
         <p>A unidade de memória é responsável por armazenar dados temporários que estão em uso:</p>
         <ul>
@@ -109,13 +111,14 @@
     </div>
 </div>
 
-<!-- Módulo para Processador -->
+<!-- Módulo: Processador -->
 <div class="modulo">
     <input type="checkbox" id="toggle-processador" class="toggle">
     <label for="toggle-processador" class="modulo-header">
         <h4>Processador</h4>
     </label>
     <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-processador').checked = false;">Fechar</button>
         <h3>Processador de um Computador</h3>
         <p>O processador é a unidade central de processamento do computador, responsável por executar instruções e realizar cálculos. Aqui estão os principais componentes e seu funcionamento:</p>
 
