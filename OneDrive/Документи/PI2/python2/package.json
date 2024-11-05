@@ -1,7 +1,7 @@
 {
     "name": "python",
     "version": "1.0.0",
-    "description": "",
+    "description": "Projeto de exemplo usando Sass",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
         "url": "git+https://github.com/miguelolegna/Python-avan-ado.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Miguel Olegna",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/miguelolegna/Python-avan-ado/issues"
