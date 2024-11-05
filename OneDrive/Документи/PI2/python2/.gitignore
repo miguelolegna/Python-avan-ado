@@ -1,0 +1,4 @@
+#ignorar  ambiente virtual
+venv
+dependencias
+.vercel

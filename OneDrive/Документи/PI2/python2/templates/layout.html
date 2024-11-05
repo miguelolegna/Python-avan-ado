@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/projeto">Projeto</a>
+            <a href="/documentacao">Documentação</a>
+            <a href="/modulos">Módulos</a>
+            <a href="/processamento">Processamento</a> <!-- Novo link -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="/" class="nav-button">Home</a></li>
+                <li><a href="/modulos" class="nav-button">Módulos</a></li>
+                <li><a href="/documentacao" class="nav-button">Documentação</a></li>
+                <li><a href="/projeto" class="nav-button">Projeto</a></li>
+                <li><a href="/processamento" class="nav-button">Processamento</a></li> <!-- Novo link -->
+            </ul>
+        </nav>
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
