@@ -4,18 +4,16 @@
 
 {% block content %}
 <h2>Processamento Computaccional</h2>
-<p>Aqui você pode explorar detalhes sobre os métodos e técnicas de processamento computacional de a cordo com o módulo da disciplina.</p>
+<p>Aqui você pode explorar detalhes sobre os métodos e técnicas de processamento computacional de acordo com o módulo da disciplina.</p>
 
 <h3>Módulos de Processamento de Dados</h3>
 
 <!-- Módulo: Componentes de um Computador -->
 <div class="modulo">
-    <input type="checkbox" id="toggle-componente" class="toggle">
-    <label for="toggle-componente" class="modulo-header">
+    <div class="modulo-header">
         <h4>Componentes de um Computador</h4>
-    </label>
+    </div>
     <div class="modulo-content">
-        <button class="close-button" onclick="document.getElementById('toggle-componente').checked = false;">Fechar</button>
         <p>Os principais componentes de um computador e suas funções são:</p>
         <div class="component-container">
             <div class="component">
@@ -34,18 +32,17 @@
                 <strong>Unidade Lógica Aritmética (ALU)</strong>: 
                 <p>A ALU é outro componente da CPU que realiza todas as operações aritméticas e lógicas. Isso inclui adição, subtração e comparações (como maior ou menor que).</p>
             </div>
+            <button class="close-button" onclick="fecharModulo(this)">Fechar</button>
         </div>
     </div>
 </div>
 
 <!-- Módulo: Unidade de Memória -->
 <div class="modulo">
-    <input type="checkbox" id="toggle-memoria" class="toggle">
-    <label for="toggle-memoria" class="modulo-header">
-        <h4>Unidade de Memória</h4>
-    </label>
+    <div class="modulo-header">
+    <h4>Unidade de Memória</h4>
+</div>
     <div class="modulo-content">
-        <button class="close-button" onclick="document.getElementById('toggle-memoria').checked = false;">Fechar</button>
         <h3>Unidade de Memória</h3>
         <p>A unidade de memória é responsável por armazenar dados temporários que estão em uso:</p>
         <ul>
@@ -113,12 +110,10 @@
 
 <!-- Módulo: Processador -->
 <div class="modulo">
-    <input type="checkbox" id="toggle-processador" class="toggle">
-    <label for="toggle-processador" class="modulo-header">
-        <h4>Processador</h4>
-    </label>
+    <div class="modulo-header">
+    <h4>Processador</h4>
+</div>
     <div class="modulo-content">
-        <button class="close-button" onclick="document.getElementById('toggle-processador').checked = false;">Fechar</button>
         <h3>Processador de um Computador</h3>
         <p>O processador é a unidade central de processamento do computador, responsável por executar instruções e realizar cálculos. Aqui estão os principais componentes e seu funcionamento:</p>
 
@@ -143,5 +138,41 @@
         </ol>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todos os títulos de módulos
+    const moduloHeaders = document.querySelectorAll('.modulo-header');
 
+    moduloHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const moduloContent = header.nextElementSibling;  // Pega o conteúdo associado ao módulo
+
+            // Se o conteúdo já estiver visível
+            if (moduloContent.style.maxHeight) {
+                // Esconde o conteúdo
+                moduloContent.style.maxHeight = null;
+                moduloContent.style.opacity = 0;
+                moduloContent.style.transform = "scale(0.8)";
+            } else {
+                // Se o conteúdo não estiver visível, expande o conteúdo
+                moduloContent.style.maxHeight = moduloContent.scrollHeight + "px";
+                moduloContent.style.opacity = 1;
+                moduloContent.style.transform = "scale(1)";
+            }
+        });
+    });
+});
+// Função para fechar o módulo ao clicar no botão de fechar
+function fecharModulo(button) {
+    const moduloContent = button.closest('.modulo-content');
+    moduloContent.style.maxHeight = null;
+    moduloContent.style.opacity = 0;
+    moduloContent.style.transform = "scale(0.8)";
+}
+
+</script>
 {% endblock %}
+
+
+
+

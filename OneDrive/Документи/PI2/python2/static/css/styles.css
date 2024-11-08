@@ -27,7 +27,7 @@ body {
   box-shadow: 0 4px 15px #09f7cf;
 }
 .nav-button:active {
-  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.7);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.7019607843);
 }
 
 nav {
@@ -68,7 +68,6 @@ nav::before {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-left: 0px;
 }
 
 .content {
@@ -78,7 +77,7 @@ nav::before {
 }
 
 .welcome h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #09f7cf;
 }
 .welcome p {
@@ -96,81 +95,19 @@ nav::before {
   position: relative;
 }
 
-.toggle {
-  display: none;
-}
-
-.modulo-content {
-  max-height: 0;
-  overflow: hidden;
-  overflow-y: scroll;
-  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-  opacity: 0;
-  transform: scale(0.8);
-  background-color: black;
-  border: 1px solid #09f7cf;
-  border-radius: 0 0 8px 8px;
-  padding: 0 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-}
-.modulo-content::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
-
-.toggle:checked + .modulo-header + .modulo-content {
-  max-height: 100vh;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.modulo h4, .modulo h5 {
-  color: #09f7cf;
-}
-.modulo h5 {
-  margin-top: 10px;
-}
-.modulo ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-.modulo ul li {
-  margin-bottom: 8px;
-}
-.modulo a {
-  color: #007bff;
-  text-decoration: none;
-}
-.modulo a:hover {
-  text-decoration: underline;
-}
-
-.component-container {
-  margin-top: 20px;
-}
-
-.component {
-  background-color: black;
-  border: 1px solid #09f7cf;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-.component strong {
-  color: #09f7cf;
-}
-.component p {
-  margin-top: 5px;
+.close-button {
+  background: rgba(3, 3, 3, 0.5);
+  border: none;
   color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  margin: 10px 0;
 }
+
+.close-button:hover {
+  background: rgba(2, 2, 2, 0.2);
+}
+
+/*# sourceMappingURL=styles.css.map */

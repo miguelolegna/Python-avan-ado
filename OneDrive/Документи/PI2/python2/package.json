@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build-css": "npx sass --verbose static/css/styles.scss static/css/styles.css",
-        "watch-css": "npx sass --watch --verbose static/css/styles.scss:static/css/styles.css"
+        "build-bulma": "sass --load-path=node_modules static/css/styles.scss static/css/styles.css",
+        "start": "npm run build-bulma -- --watch"
     },
     "repository": {
         "type": "git",
@@ -19,7 +19,8 @@
         "url": "https://github.com/miguelolegna/Python-avan-ado/issues"
     },
     "homepage": "https://github.com/miguelolegna/Python-avan-ado#readme",
-    "devDependencies": {
-        "sass": "^1.80.3"
+    "dependencies": {
+        "bulma": "^1.0.2",
+        "sass": "^1.80.6"
     }
 }
