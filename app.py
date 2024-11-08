@@ -1,13 +1,10 @@
 from flask import Flask
-from rotas import rotas
+from rotas import rotas  # Importa o blueprint de rotas
 
 app = Flask(__name__)
 
-# Configuração do diretório de upload
-app.config['UPLOAD_FOLDER'] = 'static/uploads'
-
-# Registrando as rotas
+# Registra o blueprint de rotas
 app.register_blueprint(rotas)
 
-if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(debug=True)

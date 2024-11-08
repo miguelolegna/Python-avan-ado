@@ -1,15 +1,18 @@
-{% extends "layout.html" %}
-
-{% block title %}Imagens Salvas{% endblock %}
-
-{% block content %}
-    <h1>Imagens Salvas</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas Criadas</title>
+</head>
+<body>
+    <h1>Páginas Criadas</h1>
     <ul>
-        {% for image in images_data %}
-            <li>
-                <h2>{{ image.page_name }}</h2>
-                <img src="{{ url_for('static', filename='uploads/' + image.image_filename) }}" alt="{{ image.page_name }}">
-            </li>
+        {% for page in pages %}
+            <li><a href="{{ url_for('rotas.view_page', page_name=page['page_name']) }}">{{ page['page_name'] }}</a></li>
         {% endfor %}
     </ul>
-{% endblock %}
+
+    <a href="{{ url_for('rotas.create_page') }}">Criar Nova Página</a>
+</body>
+</html>

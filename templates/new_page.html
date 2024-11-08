@@ -1,9 +1,14 @@
-{% extends "layout.html" %}
+{% extends 'layout.html' %}
 
-{% block title %}Página Criada{% endblock %}
+{% block title %}{{ page['page_name'] }}{% endblock %}
 
 {% block content %}
-    <h1>{{ page['page_name'] }}</h1>
-    <p>Esta é a página de {{ page['page_name'] }}.</p>
-    <img src="{{ url_for('static', filename='uploads/' + page['image_filename']) }}" alt="{{ page['page_name'] }}">
+<h1>{{ page['page_name'] }}</h1>
+
+<!-- Verifique se a chave 'image_path' existe -->
+{% if page['image_path'] %}
+    <img src="{{ url_for('static', filename='uploads/' + page['image_filename']) }}" alt="Imagem da página">
+{% else %}
+    <p>Imagem não disponível</p>
+{% endif %}
 {% endblock %}
