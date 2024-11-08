@@ -9,5 +9,5 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 # Registrando as rotas
 app.register_blueprint(rotas)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0', port=5000)
