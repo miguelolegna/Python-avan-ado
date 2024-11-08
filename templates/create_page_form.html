@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Criar Página{% endblock %}
+
+{% block content %}
+    <h1>Criar Nova Página</h1>
+    <form action="{{ url_for('rotas.create_page') }}" method="POST" enctype="multipart/form-data">
+        <label for="page_name">Nome da Página:</label>
+        <input type="text" id="page_name" name="page_name" required><br><br>
+
+        <label for="image">Escolher Imagem:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+        <input type="submit" value="Criar Página">
+    </form>
+{% endblock %}

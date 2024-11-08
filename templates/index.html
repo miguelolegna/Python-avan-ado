@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Imagens Salvas{% endblock %}
+
+{% block content %}
+    <h1>Imagens Salvas</h1>
+    <ul>
+        {% for image in images_data %}
+            <li>
+                <h2>{{ image.page_name }}</h2>
+                <img src="{{ url_for('static', filename='uploads/' + image.image_filename) }}" alt="{{ image.page_name }}">
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
