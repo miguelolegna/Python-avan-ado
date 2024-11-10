@@ -41,3 +41,18 @@ def view_page(page_name):
         return "Página não encontrada", 404
     
     return render_template('new_page.html', page=page)
+
+# Rota para excluir uma página
+@rotas.route('/delete_page/<page_name>', methods=['POST'])
+def delete_page(page_name):
+    # Encontrar a página a ser excluída
+    page_to_delete = next((p for p in pages if p['page_name'] == page_name), None)
+    
+    if page_to_delete:
+        # Excluir a imagem do Cloudinary
+        cloudinary.uploader.destroy(page_to_delete['image_public_id'])
+        
+        # Remover a página da lista
+        pages.remove(page_to_delete)
+    
+    return redirect(url_for('rotas.index'))
