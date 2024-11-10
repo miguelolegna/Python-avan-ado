@@ -2,7 +2,7 @@ import cloudinary
 
 # Configuração do Cloudinary
 cloudinary.config(
-    cloud_name="seu_cloud_name",  # Substitua por seu cloud_name do Cloudinary
-    api_key="sua_api_key",        # Substitua por sua api_key do Cloudinary
-    api_secret="seu_api_secret"   # Substitua por seu api_secret do Cloudinary
+    cloud_name="dsffb07j5",  # Substitua pelo seu cloud_name
+    api_key="879557861268383",  # Substitua pela sua api_key
+    api_secret="t7DxBBfnn9pu7XQBjuAMbzNQm68"  # Substitua pelo seu api_secret
 )
