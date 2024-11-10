@@ -5,8 +5,8 @@
 {% block content %}
 <h1>{{ page['page_name'] }}</h1>
 
-{% if page['image_path'] %}
-    <img src="{{ url_for('static', filename='uploads/' + page['image_filename']) }}" alt="Imagem da página">
+{% if page['image_url'] %}
+    <img src="{{ page['image_url'] }}" alt="Imagem da página">
 {% else %}
     <p>Imagem não disponível</p>
 {% endif %}

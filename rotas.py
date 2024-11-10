@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for
-import os
+import cloudinary.uploader
 from werkzeug.utils import secure_filename
 
 rotas = Blueprint('rotas', __name__)
@@ -20,13 +20,13 @@ def create_page():
         image_file = request.files['image']
         
         if image_file:
-            # Salvar imagem
-            filename = secure_filename(image_file.filename)
-            image_path = os.path.join('static/uploads', filename)
-            image_file.save(image_path)
+            # Envia a imagem para o Cloudinary
+            image = cloudinary.uploader.upload(image_file)
+            image_url = image['url']
+            image_public_id = image['public_id']
             
-            # Adicionar página à lista
-            pages.append({'page_name': page_name, 'image_filename': filename, 'image_path': image_path})
+            # Adiciona a página à lista
+            pages.append({'page_name': page_name, 'image_url': image_url, 'image_public_id': image_public_id})
         
         return redirect(url_for('rotas.index'))
     
