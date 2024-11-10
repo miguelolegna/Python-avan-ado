@@ -1,14 +1,18 @@
-{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.page_name }}</title>
+</head>
+<body>
+    <h1>{{ page.page_name }}</h1>
 
-{% block title %}{{ page['page_name'] }}{% endblock %}
-
-{% block content %}
-<h1>{{ page['page_name'] }}</h1>
-
-<!-- Verifique se a chave 'image_path' existe -->
-{% if page['image_path'] %}
-    <img src="{{ url_for('static', filename='uploads/' + page['image_filename']) }}" alt="Imagem da página">
-{% else %}
-    <p>Imagem não disponível</p>
-{% endif %}
-{% endblock %}
+    {% if page.image_path %}
+        <img src="{{ url_for('static', filename='uploads/' + page.image_filename) }}" alt="Imagem da página">
+    {% else %}
+        <p>Imagem não disponível</p>
+    {% endif %}
+    
+</body>
+</html>

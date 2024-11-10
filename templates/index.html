@@ -9,7 +9,7 @@
     <h1>Páginas Criadas</h1>
     <ul>
         {% for page in pages %}
-            <li><a href="{{ url_for('rotas.view_page', page_name=page['page_name']) }}">{{ page['page_name'] }}</a></li>
+            <li><a href="{{ url_for('rotas.view_page', id=page.id) }}">{{ page.page_name }}</a></li>
         {% endfor %}
     </ul>
 
