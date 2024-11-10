@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Páginas Criadas</title>
-</head>
-<body>
-    <h1>Páginas Criadas</h1>
-    <ul>
-        {% for page in pages %}
-            <li><a href="{{ url_for('rotas.view_page', id=page.id) }}">{{ page.page_name }}</a></li>
-        {% endfor %}
-    </ul>
+{% extends 'layout.html' %}
 
-    <a href="{{ url_for('rotas.create_page') }}">Criar Nova Página</a>
-</body>
-</html>
+{% block title %}Páginas Criadas{% endblock %}
+
+{% block content %}
+<h1>Páginas Criadas</h1>
+<ul>
+    {% for page in pages %}
+        <li><a href="{{ url_for('rotas.view_page', page_name=page['page_name']) }}">{{ page['page_name'] }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
