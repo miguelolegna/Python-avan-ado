@@ -8,4 +8,20 @@
     <p>Para começar a explorar, toque na barra luminosa á esquerda.</p>
 </div>
 
+<div class="pages-list">
+    <h2>Páginas Criadas</h2>
+    <ul>
+        {% for page in pages %}
+            <li>
+                <a href="{{ url_for('rotas.view_page', page_name=page['page_name']) }}">{{ page['page_name'] }}</a>
+                
+                <form action="{{ url_for('rotas.delete_page', page_name=page['page_name']) }}" method="post" style="display:inline;">
+                    <button type="submit">Excluir</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('rotas.create_page') }}" class="create-button">Criar Nova Página</a>
+</div>
 {% endblock %}

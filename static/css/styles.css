@@ -207,3 +207,50 @@ nav::before {
     color: #f1f1f1;                     /* Cor do texto do parágrafo */
 }
 
+/* Formulários */
+.create-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Navegação */
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Tabelas */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.table-header th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Listas */
+.steps-list {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.steps-list li {
+    margin-bottom: 10px;
+}
+

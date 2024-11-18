@@ -2,3 +2,7 @@ Flask==3.0.3
 
 # Dependências adicionais 
 # sass==1.32.0  # Compilador de Sass para CSS
+
+flask
+cloudinary
+Werkzeug
