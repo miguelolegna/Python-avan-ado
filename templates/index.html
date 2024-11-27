@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Páginas Criadas</title>
-</head>
-<body>
-    <h1>Páginas Criadas.</h1>
+{% extends "layout.html" %}
+
+{% block title %}Bem-vindo!{% endblock %}
+
+{% block content %}
+<div class="welcome">
+    <h1>Bem-vindo ao nosso Trabalho</h1>
+    <p>Para começar a explorar, toque na barra luminosa á esquerda.</p>
+</div>
+
+<div class="pages-list">
+    <h2>Páginas Criadas</h2>
     <ul>
         {% for page in pages %}
             <li>
                 <a href="{{ url_for('rotas.view_page', page_name=page['page_name']) }}">{{ page['page_name'] }}</a>
                 
-                <!-- Formulário de exclusão -->
                 <form action="{{ url_for('rotas.delete_page', page_name=page['page_name']) }}" method="post" style="display:inline;">
                     <button type="submit">Excluir</button>
                 </form>
@@ -20,6 +22,6 @@
         {% endfor %}
     </ul>
 
-    <a href="{{ url_for('rotas.create_page') }}">Criar Nova Página</a>
-</body>
-</html>
+    <a href="{{ url_for('rotas.create_page') }}" class="create-button">Criar Nova Página</a>
+</div>
+{% endblock %}

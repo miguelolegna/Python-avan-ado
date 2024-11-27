@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>{% block title %}Meu Site{% endblock %}</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="{{ url_for('rotas.index') }}">Início</a>
-            <a href="{{ url_for('rotas.create_page') }}">Criar Página</a>
+            <a href="{{ url_for('index') }}" class="nav-link">Início</a>
+            <a href="{{ url_for('rotas.create_page') }}" class="nav-link">Criar Página</a>
+            <a href="{{ url_for('projeto') }}" class="nav-link">Projeto</a>
+            <a href="{{ url_for('documentacao') }}" class="nav-link">Documentação</a>
+            <a href="{{ url_for('modulos') }}" class="nav-link">Módulos</a>
+            <a href="{{ url_for('processamento') }}" class="nav-link">Processamento</a>
         </nav>
     </header>
+
     <div class="container">
+        <nav class="sidebar">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="{{ url_for('index') }}" class="nav-button">Home</a></li>
+                <li><a href="{{ url_for('modulos') }}" class="nav-button">Módulos</a></li>
+                <li><a href="{{ url_for('documentacao') }}" class="nav-button">Documentação</a></li>
+                <li><a href="{{ url_for('projeto') }}" class="nav-button">Projeto</a></li>
+                <li><a href="{{ url_for('processamento') }}" class="nav-button">Processamento</a></li>
+            </ul>
+        </nav>
+        
         <div class="content">
             {% block content %}{% endblock %}
         </div>
     </div>
+
     <footer>
         <p>&copy; 2024 Meu Site</p>
     </footer>

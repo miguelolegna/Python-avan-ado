@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/* Variáveis para cores */
+$bg-light-gray: #D3D3D3;/* Fundo cinza claro */
+$bg-dark-gray: #555;
+$text-color: white;
+$header-bg: #333;
+$hover-bg: #777;
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/img/baclground1.jpg');
+    background-size: cover; /* Para cobrir toda a tela */
+    background-repeat: no-repeat; /* Para evitar repetição da imagem */
+    background-position: center; /* Para centralizar a imagem */
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+header {
+    background-color: $header-bg;
+    color: $text-color;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+  
+/* Estilos da barra lateral */
+.sidebar {
+  position: fixed;
+  left: 10px; /* Margem para a esquerda */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  width: 40px; /* Largura inicial pequena */
+  height: 60px; /* Altura inicial pequena */
+  background-color: #000000; 
+  color: $text-color;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s; /* Transição suave */
+  padding-top: 20px;
+  border-radius: 10px; /* Bordas arredondadas */
+  
+
+  &:hover {
+    width: 200px; /* Largura expandida */
+    height: 370px; /* Altura expandida */
+    border-radius: 10px 
+  }
+
+  nav {
+    display: flex; /* Adiciona flexbox */
+    flex-direction: column; /* Alinha verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Largura total do nav */
+    opacity: 0; /* Inicia invisível */
+    transition: opacity 0.5s; /* Transição suave */
+
+    &:hover {
+      opacity: 1; /* Visível ao passar o mouse */
+    }
+
+    h2 {
+      text-align: center; /* Centraliza o texto */
+      margin: 0; /* Remove margens padrão */
+      padding: 10px 0; /* Adiciona espaço em cima e embaixo */
+      width: 100%; /* Garante que ocupe toda a largura */
+    }
+
+    p {
+      margin: 15px 0;
+      text-align: center; /* Centraliza os links */
+    }
+
+    a {
+      color: $text-color; /* Letras visíveis */
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        background-color: $hover-bg; /* Efeito ao passar o mouse sobre os links */
+      }
+    }
+  }
+}
+
+.content-container {
+    margin-left: 60px; 
+    padding: 20px;
+    transition: margin-left 0.5s;
+    height: calc(100vh - 80px); /* Ajusta a altura para caber no viewport */
+    padding-bottom: 80px;
+}
+
+.section-container {
+    display: none; /* Oculta todas as seções por padrão */
+    background-color: white; /* Fundo branco */
+    margin: 20px auto; /* Centraliza horizontalmente com margem superior/inferior */
+    padding: 10px;
+    max-width: 800px; /* Largura máxima para manter a leitura confortável */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    border-radius: 8px; /* Bordas arredondadas, opcional */
+    max-height: calc(100vh - 160px); /* Altura máxima subtraindo header e footer */
+    overflow-y: auto; /* Permite rolagem vertical apenas neste contêiner */
+    
+}
+
+
+ul {
+    list-style-position: inside; /* Marcadores dentro do <li> */
+    padding-left: 0; /* Remove preenchimento padrão da lista */
+}
+
+.title{
+    text-align: center;
+    color: $text-color; 
+    background-color: rgba(black, 0.7);
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+}

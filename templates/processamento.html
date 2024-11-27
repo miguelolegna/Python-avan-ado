@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block title %}Processamento{% endblock %}
+
+{% block content %}
+<h2>Processamento Computacional</h2>
+<p>Aqui você pode explorar detalhes sobre os métodos e técnicas de processamento computacional de acordo com o módulo da disciplina.</p>
+
+<h3>Módulos de Processamento de Dados</h3>
+
+<!-- Módulo: Componentes de um Computador -->
+<div class="modulo">
+    <input type="checkbox" id="toggle-componente" class="toggle">
+    <label for="toggle-componente" class="modulo-header">
+        <h4>Componentes de um Computador</h4>
+    </label>
+    <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-componente').checked = false;">Fechar</button>
+        <p>Os principais componentes de um computador e suas funções são:</p>
+        <div class="component-container">
+            <div class="component">
+                <strong>CPU (Unidade Central de Processamento)</strong>: 
+                <p>A CPU é frequentemente chamada de "cérebro" do computador. Ela realiza todas as operações lógicas e aritméticas necessárias para executar instruções de programas. Processa dados e controla o fluxo de informações dentro do sistema.</p>
+            </div>
+            <div class="component">
+                <strong>Memória (RAM)</strong>: 
+                <p>A memória, muitas vezes referida como RAM (Memória de Acesso Aleatório), armazena temporariamente dados e instruções que a CPU precisa enquanto realiza tarefas. É volátil, o que significa que perde seu conteúdo quando a energia é desligada.</p>
+            </div>
+            <div class="component">
+                <strong>Unidade de Controle</strong>: 
+                <p>A Unidade de Controle (UC) é um componente da CPU que dirige a operação do processador. Ela informa à memória, ALU e dispositivos de E/S como responder às instruções que foram enviadas ao processador.</p>
+            </div>
+            <div class="component">
+                <strong>Unidade Lógica Aritmética (ALU)</strong>: 
+                <p>A ALU é outro componente da CPU que realiza todas as operações aritméticas e lógicas. Isso inclui adição, subtração e comparações (como maior ou menor que).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Módulo: Unidade de Memória -->
+<div class="modulo">
+    <input type="checkbox" id="toggle-memoria" class="toggle">
+    <label for="toggle-memoria" class="modulo-header">
+        <h4>Unidade de Memória</h4>
+    </label>
+    <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-memoria').checked = false;">Fechar</button>
+        <h3>Unidade de Memória</h3>
+        <p>A unidade de memória é responsável por armazenar dados temporários que estão em uso:</p>
+        <ul>
+            <li>Memória Volátil (RAM)</li>
+            <li>Memória Não Volátil (ROM, Flash)</li>
+            <li>Cache de Memória</li>
+            <li>Unidade de Armazenamento (HDD/SSD)</li>
+        </ul>
+        
+        <h4>O que é a Unidade de Memória?</h4>
+        <p>A Unidade de Memória, frequentemente referida como RAM (Memória de Acesso Aleatório), é um componente essencial do computador que armazena temporariamente dados e instruções necessárias para a CPU executar tarefas. A RAM é volátil, o que significa que perde seu conteúdo quando a energia é desligada.</p>
+    
+        <h4>Estrutura e Funcionamento</h4>
+        <p>A memória é composta por milhões de células de memória, cada uma capaz de armazenar um bit (0 ou 1). Os bits são agrupados em unidades chamadas bytes (8 bits). A capacidade da memória é geralmente medida em gigabytes (GB) ou terabytes (TB).</p>
+    
+        <h4>Conversão de Bits</h4>
+        <p>Para entender a capacidade de armazenamento, é importante conhecer a conversão entre unidades:</p>
+        <div class="conversion-table">
+            <table class="data-table">
+                <thead class="table-header">
+                    <tr>
+                        <th>Unidade</th>
+                        <th>Valor em Bits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bit</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Byte</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Kilobyte (KB)</td>
+                        <td>1024 Bytes</td>
+                    </tr>
+                    <tr>
+                        <td>Megabyte (MB)</td>
+                        <td>1024 KB</td>
+                    </tr>
+                    <tr>
+                        <td>Gigabyte (GB)</td>
+                        <td>1024 MB</td>
+                    </tr>
+                    <tr>
+                        <td>Terabyte (TB)</td>
+                        <td>1024 GB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Endereçamento de Memória</h4>
+        <p>O endereçamento de memória refere-se ao método utilizado para acessar diferentes locais de memória em um sistema computacional. Cada local tem um endereço único. Aqui estão os tipos principais de endereçamento:</p>
+        <ul>
+            <li><strong>Endereçamento Direto:</strong> O endereço do operando é especificado diretamente.</li>
+            <li><strong>Endereçamento Indireto:</strong> O endereço é acessado através de outro endereço.</li>
+            <li><strong>Endereçamento Registrador:</strong> O operando está armazenado em um registrador.</li>
+            <li><strong>Endereçamento de Deslocamento:</strong> Combina um endereço base com um deslocamento.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Módulo: Processador -->
+<div class="modulo">
+    <input type="checkbox" id="toggle-processador" class="toggle">
+    <label for="toggle-processador" class="modulo-header">
+        <h4>Processador</h4>
+    </label>
+    <div class="modulo-content">
+        <button class="close-button" onclick="document.getElementById('toggle-processador').checked = false;">Fechar</button>
+        <h3>Processador de um Computador</h3>
+        <p>O processador é a unidade central de processamento do computador, responsável por executar instruções e realizar cálculos. Aqui estão os principais componentes e seu funcionamento:</p>
+
+        <h4>Estrutura Básica do Processador</h4>
+        <p>O processador é composto por várias partes que trabalham juntas para executar operações:</p>
+        <ul>
+            <li><strong>Unidade Lógica e Aritmética (ULA ou ALU):</strong> 
+                <p>A ULA é responsável por realizar as operações matemáticas, como adição e subtração, e também operações lógicas, como comparações. Por exemplo, se o processador precisa comparar dois números para ver qual é o maior ou somar dois números, essa tarefa é executada pela ULA.</p>
+            </li>
+            <li><strong>Unidade de Controle (UC ou CU):</strong>
+                <p>A UC é o "cérebro" do processador. Ela coordena todas as operações, organizando a execução das instruções. A UC busca uma instrução na memória, decodifica para entender o que a ULA precisa fazer e, em seguida, executa a instrução.</p>
+            </li>
+        </ul>
+
+        <h4>Funcionamento Interno de um Processador Simples</h4>
+        <p>Imagine que o processador recebe a instrução para somar dois números (2 + 3):</p>
+        <ol>
+            <li><strong>Busca da Instrução:</strong> A UC busca na memória a instrução para realizar essa soma.</li>
+            <li><strong>Decodificação:</strong> A UC decodifica a instrução, identificando que é uma operação de soma.</li>
+            <li><strong>Execução:</strong> A ULA recebe os números e faz a operação, retornando o resultado (5).</li>
+            <li><strong>Armazenamento do Resultado:</strong> A UC pode então armazenar o resultado em um registrador (área de memória dentro do processador).</li>
+        </ol>
+    </div>
+</div>
+
+{% endblock %}

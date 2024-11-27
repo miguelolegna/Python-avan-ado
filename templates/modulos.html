@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block title %}Módulos{% endblock %}
+
+{% block content %}
+<h2>Módulos</h2>
+<br>
+
+<div class="modulos-container">
+    <div class="modulo">
+        <input type="checkbox" id="toggle-cpp" class="toggle" />
+        <label for="toggle-cpp" class="modulo-header">
+            <h3>C++</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-cpp').checked = false;">Fechar</button>
+            <h2>História do C++</h2>
+            <p>
+                O C++ foi desenvolvido por Bjarne Stroustrup, começando em 1979 na Bell Labs como uma extensão da linguagem C. O objetivo era adicionar suporte à programação orientada a objetos, permitindo que os programadores criassem aplicativos mais complexos e organizados. A primeira versão comercial foi lançada em 1985, e desde então, a linguagem passou por várias revisões e melhorias, incluindo a introdução de recursos como templates, exceções e, mais recentemente, o conceito de auto e smart pointers.
+            </p>
+            
+            <h3>Exemplo de um programa "Hello World"</h3>
+            <pre><code>
+        #include &lt;iostream&gt;
+        
+        int main() {
+            std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+            return 0;
+        }
+            </code></pre>
+            <p>
+                Este simples programa imprime "Hello, World!" na tela. É frequentemente usado como o primeiro programa que os novos programadores aprendem em qualquer linguagem.
+            </p>
+        
+            <h3>Empresas que utilizam C++</h3>
+            <p>
+                O C++ é amplamente utilizado em várias indústrias. Grandes empresas como Microsoft, Google, e Adobe utilizam C++ em seus produtos e serviços. Por exemplo, o sistema operacional Windows e o navegador Google Chrome têm partes significativas escritas em C++. Além disso, muitas aplicações financeiras e jogos eletrônicos usam C++ devido ao seu desempenho e eficiência.
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="modulo">
+        <input type="checkbox" id="toggle-python" class="toggle" />
+        <label for="toggle-python" class="modulo-header">
+            <h3>Python</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-python').checked = false;">Fechar</button>
+            <h2>História do Python</h2>
+            <p>
+                Python foi criado por Guido van Rossum e lançado pela primeira vez em 1991. A linguagem foi projetada com a filosofia de que a legibilidade do código é fundamental, tornando-a fácil de aprender e usar. Python suporta múltiplos paradigmas de programação, incluindo programação orientada a objetos e programação funcional. Desde seu lançamento, Python se tornou uma das linguagens de programação mais populares do mundo, utilizada em diversas áreas, como desenvolvimento web, ciência de dados, automação, inteligência artificial e muito mais.
+            </p>
+            
+            <h3>Exemplo de um programa "Hello World"</h3>
+            <pre><code>
+        print("Hello, World!")
+            </code></pre>
+            <p>
+                Este simples programa imprime "Hello, World!" na tela. É frequentemente o primeiro programa que os novos programadores aprendem ao iniciar sua jornada na programação.
+            </p>
+        
+            <h3>Empresas que utilizam Python</h3>
+            <p>
+                Python é amplamente utilizado por empresas de todos os tamanhos, incluindo gigantes como Google, Facebook, Instagram e Spotify. Por exemplo, o Google utiliza Python para vários de seus serviços, enquanto o Instagram usa Python para lidar com suas necessidades de back-end. Além disso, Python é uma escolha popular em áreas de ciência de dados e aprendizado de máquina, sendo utilizado por empresas como Netflix e Uber para análise de dados e modelagem preditiva.
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="modulo">
+        <input type="checkbox" id="toggle-java" class="toggle" />
+        <label for="toggle-java" class="modulo-header">
+            <h3>Java</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-java').checked = false;">Fechar</button>
+            <h2>História do Java</h2>
+            <p>
+                Java foi criado por James Gosling e sua equipe na Sun Microsystems e foi lançado em 1995. A linguagem foi projetada com o princípio de "escreva uma vez, execute em qualquer lugar", permitindo que programas Java fossem executados em diferentes plataformas sem a necessidade de recompilação. Java se tornou uma das linguagens de programação mais populares do mundo, sendo amplamente utilizada em desenvolvimento de aplicações corporativas, sistemas embarcados, e aplicações móveis, especialmente para Android.
+            </p>
+            
+            <h3>Exemplo de um programa "Hello World"</h3>
+            <pre><code>
+        public class HelloWorld {
+            public static void main(String[] args) {
+                System.out.println("Hello, World!");
+            }
+        }
+            </code></pre>
+            <p>
+                Este programa Java simples define uma classe chamada <code>HelloWorld</code> e utiliza o método <code>main</code> para imprimir "Hello, World!" na tela. Este exemplo é muitas vezes o primeiro programa que novos desenvolvedores aprendem ao começar com Java.
+            </p>
+        
+            <h3>Empresas que utilizam Java</h3>
+            <p>
+                Java é utilizado por muitas empresas e organizações em todo o mundo. Algumas das maiores empresas que dependem de Java incluem Google, eBay, Amazon, e LinkedIn. Por exemplo, o eBay utiliza Java para suas operações de comércio eletrônico, enquanto o LinkedIn usa Java em sua plataforma de rede social para lidar com grandes volumes de dados e transações em tempo real. Java também é uma escolha popular para aplicações empresariais devido à sua robustez e escalabilidade.
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="modulo">
+        <input type="checkbox" id="toggle-redes" class="toggle" />
+        <label for="toggle-redes" class="modulo-header">
+            <h3>Administração de Redes Locais</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-redes').checked = false;">Fechar</button>
+            <h2>Administração de Redes Locais</h2>
+            <p>
+                A Administração de Redes Locais (LAN - Local Area Network) é a prática de gerenciar, configurar e manter redes que conectam dispositivos em uma área geográfica limitada, como um escritório, escola ou campus. O principal objetivo da administração de redes é garantir que os dispositivos se comuniquem eficientemente, proporcionando uma conexão segura e estável para os usuários.
+            </p>
+            
+            <h3>Práticas Comuns em Administração de Redes Locais</h3>
+            <ul>
+                <li><strong>Configuração de Roteadores e Switches:</strong> Os administradores de rede são responsáveis por configurar roteadores e switches para gerenciar o tráfego de dados dentro da rede. Isso inclui a definição de endereços IP, sub-redes e VLANs (Redes Locais Virtuais).</li>
+                <li><strong>Gerenciamento de Segurança:</strong> Implementar medidas de segurança é crucial para proteger a rede contra acessos não autorizados. Isso envolve a configuração de firewalls, VPNs (Redes Privadas Virtuais) e a monitorizaç��o do tráfego de rede.</li>
+                <li><strong>Monitoramento e Manutenção:</strong> A administração de redes também envolve o monitoramento constante do desempenho da rede. Ferramentas de monitoramento ajudam a identificar e resolver problemas antes que eles afetem os usuários finais.</li>
+            </ul>
+        
+            <h3>Importância da Administração de Redes Locais</h3>
+            <p>
+                Uma administração eficaz de redes locais é essencial para a operação diária de qualquer organização que dependa de tecnologia. Ela garante que os recursos de rede estejam disponíveis e funcionando corretamente, o que é fundamental para a produtividade dos funcionários. Além disso, uma rede bem administrada pode aumentar a segurança da informação, reduzindo o risco de perda de dados e ataques cibernéticos.
+            </p>
+        
+            <h3>Exemplo de Configuração de uma Rede Local</h3>
+            <p>
+                Uma configuração típica de rede local pode incluir a instalação de um roteador que conecta todos os dispositivos a um switch, permitindo que computadores, impressoras e dispositivos móveis se comuniquem entre si. Abaixo está um exemplo simplificado de como uma rede local pode ser estruturada:
+            </p>
+            <pre><code>
+        Internet
+           |
+        Router (IP: 192.168.1.1)
+           |
+        Switch
+           |      |      |
+        PC1    PC2    Impressora
+        (IP: 192.168.1.10) (IP: 192.168.1.11) (IP: 192.168.1.12)
+            </code></pre>
+            <p>
+                Neste exemplo, o roteador conecta a rede local à internet e o switch permite a conexão entre os dispositivos. Cada dispositivo na rede recebe um endereço IP único para facilitar a comunicação.
+            </p>
+        </div>
+    </div>
+
+    <div class="modulo">
+        <input type="checkbox" id="toggle-base-dados" class="toggle" />
+        <label for="toggle-base-dados" class="modulo-header">
+            <h3>Base de Dados</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-base-dados').checked = false;">Fechar</button>
+            <h2>Banco de Dados</h2>
+            <p>
+                Um banco de dados é um sistema que armazena e gerencia informações de forma eficiente, essencial para aplicações modernas.
+            </p>
+            
+            <h3>Características</h3>
+            <ul>
+                <li><strong>Estrutura Organizada:</strong> Dados organizados em tabelas e colunas.</li>
+                <li><strong>Manipulação de Dados:</strong> Permite operações como inserção e consulta usando SQL.</li>
+                <li><strong>Integridade e Segurança:</strong> Garante proteção e integridade das informações.</li>
+            </ul>
+        
+            <h3>Exemplos de SGBDs</h3>
+            <ul>
+                <li><strong>MySQL:</strong> Relacional de código aberto, popular na web.</li>
+                <li><strong>PostgreSQL:</strong> Avançado e com suporte a extensões.</li>
+                <li><strong>SQL Server:</strong> Proprietário da Microsoft, usado em empresas.</li>
+                <li><strong>MongoDB:</strong> NoSQL que armazena dados em documentos.</li>
+            </ul>
+        
+            <h3>Importância</h3>
+            <ul>
+                <li><strong>Decisões Informadas:</strong> Facilita análises e decisões baseadas em dados.</li>
+                <li><strong>Eficiência:</strong> Melhora o armazenamento e recuperação de dados.</li>
+                <li><strong>Segurança:</strong> Protege informações sensíveis contra acessos não autorizados.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modulo">
+        <input type="checkbox" id="toggle-processamento" class="toggle" />
+        <label for="toggle-processamento" class="modulo-header">
+            <h3>Processamento Computacional</h3>
+        </label>
+        <div class="modulo-content">
+            <button class="close-button" onclick="document.getElementById('toggle-processamento').checked = false;">Fechar</button>
+            <h2>Organização de um Computador</h2>
+        
+            <h3>Descrição Geral do Funcionamento de um Computador</h3>
+            <p>Um computador pode ser definido como uma máquina que processa dados, transformando informações de entrada em resultados de saída. Ele opera de forma sistemática, recebendo dados (inputs), processando-os de acordo com instruções pré-definidas, e então apresentando um resultado (output) ao usuário. Esse processo é coordenado por um conjunto de componentes que trabalham em conjunto, incluindo a CPU, a memória e os dispositivos de entrada e saída.</p>
+    
+            <h3>Etapas na Execução de uma Tarefa</h3>
+            <p>Vamos considerar o exemplo de abrir um navegador web. As etapas são:</p>
+            <ol class="steps-list">
+                <li><strong>Interação do Usuário:</strong> O usuário clica no ícone do navegador.</li>
+                <li><strong>Identificação e Localização:</strong> O sistema operacional identifica e localiza seus arquivos armazenados.</li>
+                <li><strong>Carregamento:</strong> O programa é transferido para a memória RAM,onde sera exceutado.</li>
+                <li><strong>Processamento:</strong> A CPU interpreta e executa as instruções necessárias para abrir o navegador. 
+                <li><strong>Exibição:</strong> A interface do navegador é mostrada na tela.</li>
+            </ol>
+        
+            <h3>Unidades de Execução de Tarefas</h3>
+            <p>Um computador opera através de unidades que trabalham em conjunto:</p>
+            <ul>
+                <li><strong>CPU (Unidade Central de Processamento):</strong> Responsável por interpretar e executar as instruções, realizando operações lógicas e aritméticas.</li>
+                <li><strong>Memória:</strong> Armazena dados e instruções temporariamente, com a RAM proporcionando acesso rápido durante a execução dos programas.</li>
+                <li><strong>Dispositivos de Entrada/Saída (I/O):</strong> Permitem a interação do usuário com o computador. Exemplos incluem teclados e mouses para entrada, e monitores e impressoras para saída.</li>
+            </ul>
+        
+            <h3>Funcionamento Conjunto</h3>
+            <p>A operação de um computador depende da colaboração entre a CPU, a memória e os dispositivos de I/O, coordenados pelo sistema operacional. Essa integração permite que o computador execute tarefas de forma rápida e eficiente, tornando-o uma ferramenta poderosa para diversas atividades.</p>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
